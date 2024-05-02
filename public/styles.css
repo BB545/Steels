@@ -1,122 +1,5 @@
 /* header */
-
-@media screen and (max-width: 767px) {
-
-    .header {
-        background-color: #1E2022;
-        width: 100%;
-        height: 75px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9998;
-    }
   
-    .nav-login {
-        padding-left: 20px;
-      }
-  
-    .nav__list {
-        display: none; 
-        margin-bottom: 0;
-    }
-  
-    .nav__div {
-        display: none;
-        position: fixed;
-        z-index: 9998;
-        top: 75px;
-        width: 100%;
-    }
-  
-    .div__item {
-        background-color: #1E2022;
-        text-align: center;
-        height: 75px;
-        line-height: 75px;
-        font-size: 20px;
-    }
-  
-    .div__item>a {
-        color: #F0F5F9;
-        text-decoration: none;
-        font-family: "Black Han Sans", sans-serif;
-        font-weight: 400;
-    }
-    
-    .nav__toggle {
-        padding-right: 20px;
-    }
-  
-    .menuBarIcons {
-        display: none;
-    }
-}
-  
-@media screen and (min-width: 768px) {
-  
-    .header {
-        background-color: #1E2022;
-        width: 100%;
-        height: 90px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9998;
-    }
-  
-    .nav__list {
-        list-style: none;
-        display: flex;
-        margin-bottom: 0;
-    }
-  
-    .nav__item {
-        padding-right: 20px;
-        font-size: 20px;
-    }
-    
-    .nav__item>a {
-        color: #d2d0db;
-        text-decoration: none;
-        font-family: "Black Han Sans", sans-serif;
-        font-weight: 400;
-    }
-  
-    .nav__toggle {
-        display: none;
-    }
-  
-    .nav__div {
-        display: none;
-    }
-  
-    .nav-login {
-      display: none;
-    }
-  
-    .no_div {
-      display: none;
-    }
-  
-    .menuBarIcons {
-        display: flex;
-    }
-  
-    .button-menu-icon {
-        padding-right: 20px;
-    }
-  
-    .badge {
-      display: none;
-    }
-}
 button.button{
       color: #fff;
 }
@@ -395,18 +278,6 @@ div.button:active {
   
 }
 
-@media  screen and (max-width: 767px){
-    .empty{
-      font-size: larger;
-    }
-    .empty ~ span{
-      font-size: normal;
-    }
-    .bi-cart2{
-      width: 200px;
-    }
-}
-
 /* Footer */
 
 * {
@@ -452,29 +323,6 @@ footer{
 .footer-sns:hover{
     fill:aqua;
 }
-  
-@media screen and (max-width: 768px) {
-    .footer {
-      width: 100%;
-      font-size: 1.5rem;
-    }
-    .footer-snsLogo{
-      margin-top: 15px;
-      justify-content:space-around;
-    }
-    .footer_sns{
-        width: 30px;
-        gap: 10px;
-    }
-    .list-item{
-      font-size: 10px; 
-    }
-    .footer {
-        gap: 2rem;
-        padding: 30px;
-        justify-content: space-around;  
-    }
-}  
 
 /* main 브랜딩 이미지 */
 
@@ -517,51 +365,6 @@ footer{
     }
     100% {
         opacity: 1;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .containermain {
-        top: 90px;
-    }
-
-    .main_content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    #main_brand {
-        font-size: 7vw;
-        font-family: "Gasoek One", sans-serif;
-        font-weight: 400;
-    }
-    #main_explain {
-        font-size: 2vw; 
-        padding-top: 30px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .containermain {
-        top: 75px;
-    }
-
-    .main_content {
-        position: absolute;
-        left: 20px;
-        bottom: 50px;
-        width: 60%;
-    }
-    #main_brand {
-        font-size: 10vw;
-        font-family: "Gasoek One", sans-serif;
-        font-weight: 400;
-    }
-    #main_explain {
-        font-size: 3vw;
-        padding-top: 30px;
     }
 }
 
@@ -609,49 +412,6 @@ footer{
     background-color: rgb(207, 207, 207);
     opacity: 0.5;
     position: relative;
-}
-
-/* 배너 */
-
-body {
-    background-attachment: fixed;
-    background-image: url(https://cdn.imweb.me/thumbnail/20230126/97f0ad1bebd44.jpg);
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: 50% 50%;
-}
-
-.banner {
-    width: 100%;
-    max-width: 1240px;
-    padding: 0;
-    margin: 0 auto;
-    background-color: transparent;
-}
-
-.banner .item {
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 16px;
-    position: relative;
-}
-
-.item {
-    height: 60px;
-}
-
-.banner-content {
-    color: white;
-    font-size: 30px;
-    text-align: right;
-    font-family: "Gasoek One", sans-serif;
-    font-weight: 400;
-}
-
-.event-btn {
-    position: absolute;
-    right: 10px;
 }
 
 /* body-back */
@@ -763,6 +523,79 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .header {
+        background-color: #1E2022;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+    }
+  
+    .nav-login {
+        padding-left: 20px;
+      }
+  
+    .nav__list {
+        display: none; 
+        margin-bottom: 0;
+    }
+  
+    .nav__div {
+        display: none;
+        position: fixed;
+        z-index: 9998;
+        top: 75px;
+        width: 100%;
+    }
+  
+    .div__item {
+        background-color: #1E2022;
+        text-align: center;
+        height: 75px;
+        line-height: 75px;
+        font-size: 20px;
+    }
+  
+    .div__item>a {
+        color: #F0F5F9;
+        text-decoration: none;
+        font-family: "Black Han Sans", sans-serif;
+        font-weight: 400;
+    }
+    
+    .nav__toggle {
+        padding-right: 20px;
+    }
+  
+    .menuBarIcons {
+        display: none;
+    }
+
+    .containermain {
+        top: 75px;
+    }
+
+    .main_content {
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+        width: 60%;
+    }
+    #main_brand {
+        font-size: 10vw;
+        font-family: "Gasoek One", sans-serif;
+        font-weight: 400;
+    }
+    #main_explain {
+        font-size: 3vw;
+        padding-top: 30px;
+    }
+
     .hover-text {
         left: 2px;
     }
@@ -786,9 +619,120 @@ body {
     #content:hover {
         font-size: 3vw;
     }
+
+    .footer {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .footer-snsLogo{
+        margin-top: 15px;
+        justify-content:space-around;
+    }
+    .footer_sns{
+        width: 30px;
+        gap: 10px;
+    }
+    .list-item{
+        font-size: 10px; 
+    }
+    .footer {
+        gap: 2rem;
+        padding: 30px;
+        justify-content: space-around;  
+    }
+
+    .empty{
+        font-size: larger;
+    }
+    .empty ~ span{
+        font-size: normal;
+    }
+    .bi-cart2{
+        width: 200px;
+    }
 }
   
 @media screen and (min-width: 768px) {
+    .header {
+        background-color: #1E2022;
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+    }
+  
+    .nav__list {
+        list-style: none;
+        display: flex;
+        margin-bottom: 0;
+    }
+  
+    .nav__item {
+        padding-right: 20px;
+        font-size: 20px;
+    }
+    
+    .nav__item>a {
+        color: #d2d0db;
+        text-decoration: none;
+        font-family: "Black Han Sans", sans-serif;
+        font-weight: 400;
+    }
+  
+    .nav__toggle {
+        display: none;
+    }
+  
+    .nav__div {
+        display: none;
+    }
+  
+    .nav-login {
+      display: none;
+    }
+  
+    .no_div {
+      display: none;
+    }
+  
+    .menuBarIcons {
+        display: flex;
+    }
+  
+    .button-menu-icon {
+        padding-right: 20px;
+    }
+  
+    .badge {
+      display: none;
+    }
+
+    .containermain {
+        top: 90px;
+    }
+
+    .main_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    #main_brand {
+        font-size: 7vw;
+        font-family: "Gasoek One", sans-serif;
+        font-weight: 400;
+    }
+    #main_explain {
+        font-size: 2vw; 
+        padding-top: 30px;
+    }
+
     .hover-text {
         right: 2px;
     }

@@ -1,0 +1,42 @@
+/* 배너 */
+
+body {
+    background-attachment: fixed;
+    background-image: url(https://cdn.imweb.me/thumbnail/20230126/97f0ad1bebd44.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50%;
+}
+
+.banner {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.banner .item {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    position: relative;
+}
+
+.item {
+    height: 60px;
+}
+
+.banner-content {
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+}
+
+.event-btn {
+    position: absolute;
+    right: 10px;
+}

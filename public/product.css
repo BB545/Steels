@@ -1,0 +1,332 @@
+/* 그리드 컨테이너 스타일 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 0 100px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+  
+/* 이미지 저장해서 보기 버튼 */
+.save-image-btn {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0 5px;
+    font-size: 2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.image-container:hover .save-image-btn {
+    display: block;
+}
+  
+/* 각 상품 요소 스타일 */
+.card {
+    text-align: center;
+}
+  
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+  
+.card h2 {
+    font-size: 2em;
+}
+  
+.card p {
+    font-size: 1em;
+}
+  
+h2 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+}
+
+/* product-page */
+
+body {
+    background-color: #c9d6de;
+}
+  
+.container {
+    margin-top: 90px;
+}
+  
+#modal {
+    display: none;
+    position: relative;
+    z-index: 9999;
+}
+  
+#modal .modal_content {
+    position: absolute;
+    width: 100%;
+    /* margin: 20px auto; */
+    margin-top: 90px;
+    padding: 20px 10px;
+    background: none;
+    color: white;
+}
+  
+#modal .modal_layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+  
+.swiper {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+  
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: white;
+    font-size: 2rem;
+    opacity: 70%;
+}
+  
+.swiper-button-prev {
+    left: 10px;
+}
+.swiper-button-next {
+    right: 10px;
+}
+  
+.swiper-pagination-bullet-active {
+    background: black;
+    opacity: 50%;
+}
+  
+.content {
+    display: flex;
+    align-items: center;
+}
+.description {
+    width: 50%;
+    padding: 2rem;
+    display: inline-block;
+    font-size: 1.5vw;
+    line-height: normal;
+}
+.close_button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+.style1 {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.style2 {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+  
+.buy_button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+a.button {
+    display: block;
+    position: relative;
+    float: left;
+    width: 120px;
+    padding: 0;
+    margin: none;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+  
+.btnFloat {
+    background: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+  
+.btnFloat:before {
+    content: "제품 구매 →";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+  
+.btnFloat:before {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+  
+.btnFloat:hover:before {
+    margin-top: -2px;
+    margin-left: 0px;
+    transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
+.btnSave {
+    background: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+  
+.save_button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+.btnSave:before {
+    content: "장바구니 추가";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+  
+.btnSave:before {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+  
+.btnSave:hover:before {
+    margin-top: -2px;
+    margin-left: 0px;
+    transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+      margin-top: 75px;
+    }
+    
+    #modal {
+      display: none;
+      position: relative;
+      z-index: 9999;
+    }
+    
+    #modal .modal_content {
+      position: absolute;
+      margin: 20px auto;
+      padding: 20px 10px;
+      background: none;
+      color: white;
+      margin-top: 75px;
+      width: 100%;
+    }
+    
+    #modal .modal_layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+    
+    .swiper {
+      width: 90%;
+      position: relative;
+      margin: 0 10px 0 10px;
+    }
+    
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      color: white;
+      font-size: 2rem;
+      opacity: 70%;
+    }
+    
+    .swiper-button-prev {
+      left: 10px;
+    }
+    .swiper-button-next {
+      right: 10px;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background: black;
+      opacity: 50%;
+    }
+    
+    .content {
+      flex-direction: column;
+    }
+    .description {
+      padding: 3vw;
+      width: 80%;
+      font-size: 2vw;
+    }
+    .close_button {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 0 0 50px 0;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .save-image-btn {
+      font-size: 17px;
+    }
+  
+    .card {
+      text-align: center;
+    }
+  
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .card h2 {
+      font-size: 3vw;
+    }
+  
+    .card p {
+      font-size: 2vw;
+    }
+  }
+  

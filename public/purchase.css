@@ -1,0 +1,119 @@
+/* 주문페이지 */
+
+body {
+    background-color: #C9D6DE;
+}
+
+h2 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.container {
+    background-color: white;
+}
+
+.pur-name {
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.price-name {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.pur-product {
+    width:100%; /* 반응형 너비 설정 */
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+}
+
+.pur-product-form>.pur-product {
+    margin-bottom: 20px;
+}
+
+.pur-product-info {
+    text-align: center;
+}
+
+.checkout {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.check-name {
+    padding-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+.check-group:not(:last-child) {
+    margin-bottom: 20px;
+}
+.check-group input[type="text"],
+.check-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.check-group select {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.check-group input[type="submit"] {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        margin: 120px auto;
+    }
+
+    .purchase {
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .pur-product img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        margin: 100px auto;
+    }
+
+    .purchase {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .pur-product-form {
+        display: flex;
+    }
+
+    .pur-product img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .pur-product {
+        margin-right: 10px;
+    }
+}
