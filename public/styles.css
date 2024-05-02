@@ -660,3 +660,152 @@ body {
     height: 25vh;
     background-color: #C9D6DE;
 } 
+
+/* animation */
+
+.login_tog,
+.cart_tog,
+.search_tog,
+.nav-login,
+.nav__toggle,
+.badge,
+.badge-ai {
+    position: relative;
+}
+
+.hover-text,
+.hover-text2 {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 10px;
+    z-index: 101;
+}
+
+.hover-text3 {
+    display: none;
+    position: absolute;
+    /* top: -50px; */
+    right: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 10px;
+    z-index: 101;
+}
+
+.nav__toggle:hover .hover-text2,
+.badge:hover .hover-text3,
+.login_tog:hover .hover-text,
+.search_tog:hover .hover-text,
+.cart_tog:hover .hover-text,
+.nav-login:hover .hover-text,
+.badge-ai:hover .hover-text3 {
+    display: block;
+}
+
+.div__item,
+.nav__item,
+#main_brand,
+#main_explain,
+.swiper-name,
+.banner-content,
+.event-btn,
+.pur-name,
+.pur-product-info,
+.pur-product,
+.check-name,
+.check-btn,
+.plus-btn-item,
+.our-pro {
+    transition: font-size 0.3s ease 0.3s;
+}
+
+.swiper-name:hover,
+.banner-content:hover,
+.pur-name:hover {
+    font-size: 70px;
+}
+
+.event-btn:hover,
+.pur-product-info:hover,
+.pur-product:hover,
+.check-name:hover,
+.check-btn:hover,
+.plus-btn-item:hover {
+    font-size: 40px;
+}
+
+.our-pro:hover {
+    font-size: 25px;
+}
+
+.swiper-slide,
+.card {
+    transition: transform 0.2s ease 0.3s;
+}
+
+#content {
+    transition: font-size 0.5s ease 0.5s;
+}
+
+.swiper-slide:hover,
+.card:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
+@media screen and (max-width: 767px) {
+    .hover-text {
+        left: 2px;
+    }
+
+    .hover-text2 {
+        right: 2px;
+    }
+    
+    .div__item:hover {
+        font-size: 35px;
+    }
+
+    #main_brand:hover {
+        font-size: 15vw;
+    }
+    
+    #main_explain:hover {
+        font-size: 4vw;
+    }
+
+    #content:hover {
+        font-size: 3vw;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    .hover-text {
+        right: 2px;
+    }
+    
+    .nav__item:hover {
+        font-size: 35px;
+    }
+
+    #main_brand:hover {
+        font-size: 12vw;
+    }
+    
+    #main_explain:hover {
+        font-size: 3vw;
+    }
+
+    #content:hover {
+        font-size: 25px;
+    }
+}
