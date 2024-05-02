@@ -1,0 +1,21 @@
+{
+  "name": "steels",
+  "version": "1.0.0",
+  "description": "포스코x코딩온 KDT Web 12기 수업 2차 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "iamport": "^0.3.4",
+    "iamport-rest-client-nodejs": "^0.9.12",
+    "nodemon": "^3.1.0"
+  }
+}
