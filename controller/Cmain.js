@@ -19,3 +19,7 @@ exports.productOut = (req,res) => {
 exports.productLife = (req,res) => {
     res.render('productLife')
 }
+
+exports.Customer = (req,res) => {
+    res.render('Customer')
+}

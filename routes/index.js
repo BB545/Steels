@@ -7,5 +7,6 @@ router.get('/productAll', controller.productAll)
 router.get('/productLiving', controller.productLiving)
 router.get('/productOut', controller.productOut)
 router.get('/productLife', controller.productLife)
+router.get('/Customer', controller.Customer)
 
 module.exports = router;
