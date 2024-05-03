@@ -1,7 +1,7 @@
 /* 주문페이지 */
 
 body {
-    background-color: #C9D6DE;
+    background-color: #ffffff;
 }
 
 h2 {
@@ -10,8 +10,14 @@ h2 {
     font-size: 2rem;
 }
 
+.cus_container {
+    background-color: #ffffff;
+    width: 100%;
+}
+
 .container {
-    background-color: white;
+    padding: 20px;
+    background-color: #C9D6DE;
 }
 
 .pur-name {
@@ -83,7 +89,7 @@ h2 {
     }
 
     .purchase {
-        width: 100vw;
+        width: 100%;
         padding: 20px;
     }
 

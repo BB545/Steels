@@ -1,45 +1,47 @@
 <section class="container">
-    <article class="purchase">
-      <div class="pur-name">회사 정보</div>
-      <div class="our-pro">* 이메일 : steels12@gmail.com</div>
-      <div class="our-pro">* 전화번호: 010-0000-0000</div>
-      <div class="pur-name">고객 정보</div>
-      <div class="checkout">
-        <form id="pur-form">
-          <div class="check-group">
-            <label for="fullname" class="check-name">이름</label>
-            <input
-              type="text"
-              id="fullname"
-              name="fullname"
-              placeholder="홍길동"
-              required
-            />
+    <div class="cus_container">
+        <article class="purchase">
+          <div class="pur-name">회사 정보</div>
+          <div class="our-pro">* 이메일 : steels12@gmail.com</div>
+          <div class="our-pro">* 전화번호: 010-0000-0000</div>
+          <div class="pur-name">고객 정보</div>
+          <div class="checkout">
+            <form id="pur-form">
+              <div class="check-group">
+                <label for="fullname" class="check-name">이름</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  placeholder="홍길동"
+                  required
+                />
+              </div>
+              <div class="check-group">
+                <label for="tel" class="check-name">전화번호</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  placeholder="010-0000-0000"
+                  required
+                />
+              </div>
+              <div class="check-group">
+                <label for="address" class="check-name">문의 내용</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="문의 내용을 입력해주세요."
+                  required
+                />
+              </div>
+              <div class="check-group">
+                <input type="submit" value="등록 완료" />
+              </div>
+            </form>
           </div>
-          <div class="check-group">
-            <label for="tel" class="check-name">전화번호</label>
-            <input
-              type="tel"
-              id="tel"
-              name="tel"
-              placeholder="010-0000-0000"
-              required
-            />
-          </div>
-          <div class="check-group">
-            <label for="address" class="check-name">문의 내용</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="문의 내용을 입력해주세요."
-              required
-            />
-          </div>
-          <div class="check-group">
-            <input type="submit" value="등록 완료" />
-          </div>
-        </form>
-      </div>
-    </article>
+        </article>
+    </div>
 </section>
