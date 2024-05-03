@@ -343,7 +343,7 @@ footer{
 .main-bg {
     width: 100%;
     height: 80vh; /* 화면의 100% 높이에 해당하는 값 */
-    background-image: url('../img_logo/main.png');
+    background-image: url('/main.jpeg');
     background-size: cover; /* 이미지가 부모 요소에 꽉 차도록 설정 */
     background-position: center; /* 이미지를 가운데로 정렬 */
 

@@ -1,0 +1,44 @@
+.swiper-back {
+    background-color: #C9D6DE;
+    overflow: hidden;
+  }
+  
+.plus-btn-item {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    z-index: 5;
+}
+  
+.swiper-name {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+}
+  
+.swiper {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+}
+  
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: white;
+    font-size: 2rem;
+    opacity: 70%;
+}
+  
+.swiper-button-prev {
+    left: 10px;
+}
+.swiper-button-next {
+    right: 10px;
+}
+.swiper-pagination-bullet-active {
+    background: black;
+    opacity: 50%;
+}
