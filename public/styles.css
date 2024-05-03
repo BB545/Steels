@@ -288,7 +288,7 @@ div.button:active {
 footer{
     width: 100%; 
   
-    background-color: #F0F5F9 ;
+    background-color: #C9D6DE ;
     color: black;
 }
    
@@ -301,7 +301,7 @@ footer{
 }
 .list-item{
     line-height:normal;
-    color: black; 
+    color: white; 
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
@@ -418,7 +418,7 @@ footer{
 
 .body-back {
     height: 25vh;
-    background-color: #C9D6DE;
+    background-color: #ffffff;
 } 
 
 /* animation */
@@ -524,7 +524,7 @@ footer{
 
 @media screen and (max-width: 767px) {
     .header {
-        background-color: #1E2022;
+        background-color: #C9D6DE;
         width: 100%;
         height: 75px;
         display: flex;
@@ -554,7 +554,7 @@ footer{
     }
   
     .div__item {
-        background-color: #1E2022;
+        background-color: #C9D6DE;
         text-align: center;
         height: 75px;
         line-height: 75px;
@@ -562,7 +562,7 @@ footer{
     }
   
     .div__item>a {
-        color: #F0F5F9;
+        color: #000000;
         text-decoration: none;
         font-family: "Black Han Sans", sans-serif;
         font-weight: 400;
@@ -654,7 +654,7 @@ footer{
   
 @media screen and (min-width: 768px) {
     .header {
-        background-color: #1E2022;
+        background-color: #C9D6DE;
         width: 100%;
         height: 90px;
         display: flex;
@@ -678,7 +678,7 @@ footer{
     }
     
     .nav__item>a {
-        color: #d2d0db;
+        color: #000000;
         text-decoration: none;
         font-family: "Black Han Sans", sans-serif;
         font-weight: 400;
