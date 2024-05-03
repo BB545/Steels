@@ -9,6 +9,7 @@ app.set('views', './views');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/static', express.static(__dirname + '/static'))
 
 const indexRouter = require('./routes');
 app.use('/', indexRouter)
