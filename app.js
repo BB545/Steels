@@ -10,9 +10,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.get('/', (req,res)=>{
-    res.render('index')
-})
+const indexRouter = require('./routes');
+app.use('/', indexRouter)
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
