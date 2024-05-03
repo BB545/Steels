@@ -1,0 +1,76 @@
+<section class="container">
+    <article class="purchase">
+      <div class="pur-name">주문 상품 정보</div>
+      <div class="checkout">
+        <form class="pur-product-form">
+          <div class="pur-product">
+            <img src="../item_jpgs/item1.jpg" alt="Product 1" />
+            <div class="pur-product-info">
+              <h2>레이크 루이스 테이블</h2>
+              <p class="pro-price">2550000원</p>
+            </div>
+          </div>
+          <div class="pur-product">
+            <img src="../item_jpgs/item2.jpg" alt="Product 2" />
+            <div class="pur-product-info">
+              <h2>'와우' 큐브</h2>
+              <p class="pro-price">6400000원</p>
+            </div>
+          </div>
+        </form>
+        <div class="pur-product">
+          <span class="price-name">총 금액</span>
+          <span class="pur-price"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="purchase">
+      <div class="pur-name">주문자 정보</div>
+      <div class="checkout">
+        <form id="pur-form">
+          <div class="check-group">
+            <label for="fullname" class="check-name">이름</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="홍길동"
+              required
+            />
+          </div>
+          <div class="check-group">
+            <label for="tel" class="check-name">전화번호</label>
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              placeholder="010-0000-0000"
+              required
+            />
+          </div>
+          <div class="check-group">
+            <label for="address" class="check-name">배송지</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="서울특별시 마포구 숭문4길 6 스프레틱스 염리 사옥 1층"
+              required
+            />
+          </div>
+          <div class="check-group">
+            <label for="payment" class="check-name">결제 수단</label>
+            <select id="payment" name="payment" required>
+              <option value="">결제 수단을 선택하세요</option>
+              <option value="creditcard">신용 카드</option>
+              <option value="paypal">페이팔</option>
+            </select>
+          </div>
+          <div class="check-group">
+            <input type="submit" value="주문 완료" />
+          </div>
+        </form>
+      </div>
+    </article>
+</section>
