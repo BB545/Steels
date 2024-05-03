@@ -1,0 +1,16 @@
+<h2>라운지 락 테이블  / 310,000원</h2>
+<p>
+    자연의 선물을 현대소재로 재해석한 독특한 모양의 라운지 락 시리즈는 비대칭 속 대칭을 이루는 각기 다른 패턴과 절제된 선이 특징입니다.
+    <br />
+    *본 상품은 주문 제작이 가능한 상품입니다.
+</p>
+<p>Specs:</p>
+<ul>
+    <li class="style1">Dimensions:</li>
+    <ul>
+        <li class="style2">(W)1000mm, (D)690mm, (H)450mm - Table</li>
+        <li class="style2">(W)400mm, (D)400mm,(H)400mm - Stool</li>
+    </ul>
+    <li class="style1">Material : 304 Stainless Steel</li>
+    <li class="style1">User Recommendations: Cleaner for stainless steel</li>
+</ul>

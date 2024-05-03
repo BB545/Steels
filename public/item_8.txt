@@ -1,0 +1,17 @@
+<h2>아크 테이블 & 의자 / 1,150,000원</h2>
+<p>
+    우아한 곡선과 유기적인 형상을 담아낸 아크 테이블과 의자입니다.
+    입체적인 직선으로 깔끔하게 디자인되어 안정감 있는 착석감을 제공합니다
+    <br />
+    *본 상품은 주문 제작이 가능한 상품입니다.
+</p>
+<p>Specs:</p>
+<ul>
+    <li class="style1">Dimensions:</li>
+    <ul>
+        <li class="style2">(W)(W)610mm, (D)445mm, (H)429mm</li>
+    </ul>
+    <li class="style1">Material : 304 Stainless Steel</li>
+    <li class="style1">Material : - AGORA / Waterproof. / White / Waterproof soft form</li>
+    <li class="style1">User Recommendations: Cleaner for stainless steel</li>
+</ul>

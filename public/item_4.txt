@@ -1,0 +1,15 @@
+<h2>파이프 테이블 / 210,000원</h2>
+<p>
+    4개의 큼지막한 원기둥이 특징인 파이프 테이블은 단순하지만 과감한 디자인으로 인테리어에 미적 측면을 더할 것입니다.
+    <br />
+    *본 상품은 주문 제작이 가능한 상품입니다.
+</p>
+<p>Specs:</p>
+<ul>
+    <li class="style1">Dimensions:</li>
+    <ul>
+        <li class="style2">(W)1600mm, (D)700mm, (H)800mm</li>
+    </ul>
+    <li class="style1">Material : 304 Stainless Steel</li>
+    <li class="style1">User Recommendations: Cleaner for stainless steel</li>
+</ul>
