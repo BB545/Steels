@@ -2,14 +2,14 @@ const itemButtons = document.querySelectorAll(".image-container img");
 
 itemButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
-        const clickedIndex = index + 1;
+        const clickedIndex = index + 7;
         const modalId = "modal_" + clickedIndex;
 
         // 모달 창 보이기
         document.getElementById("modal").style.display = "block";
 
         // 해당하는 모달만 보이기
-        for (let i = 1; i <= 9; i++) {
+        for (let i = 7; i <= 8; i++) {
             const modalElement = document.getElementById("modal_" + i);
             if (modalElement) {
                 if ("modal_" + i === modalId) {
