@@ -195,7 +195,7 @@ div.button:active {
     position: absolute;
     top: 20px;
     width: 100%;
-    padding-block: 1rem;  
+    padding: 1rem;  
     color: black;
 }
 
