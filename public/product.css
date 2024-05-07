@@ -43,7 +43,7 @@
 }
   
 .card h2 {
-    font-size: 2em;
+    font-size: 2rem;
 }
   
 .card p {
@@ -53,6 +53,7 @@
 h2 {
     font-family: "Black Han Sans", sans-serif;
     font-weight: 400;
+    font-size: 2rem;
 }
 
 /* product-page */
