@@ -5,10 +5,8 @@ itemButtons.forEach((button, index) => {
         const clickedIndex = index + 7;
         const modalId = "modal_" + clickedIndex;
 
-        // 모달 창 보이기
         document.getElementById("modal").style.display = "block";
 
-        // 해당하는 모달만 보이기
         for (let i = 7; i <= 8; i++) {
             const modalElement = document.getElementById("modal_" + i);
             if (modalElement) {
@@ -20,9 +18,8 @@ itemButtons.forEach((button, index) => {
             }
         }
 
-        // AJAX 요청으로 파일 가져오기
-        var username = "BB545"; // GitHub 사용자 이름
-        var repo = "Steels"; // GitHub 저장소 이름
+        var username = "BB545";
+        var repo = "Steels";
         var filePath = "public/item_" + clickedIndex + ".txt";
         var rawURL =
             "https://raw.githubusercontent.com/" +
@@ -35,7 +32,6 @@ itemButtons.forEach((button, index) => {
         $.ajax({
             url: rawURL,
             success: function (data) {
-                // 파일 내용을 content 요소에 추가
                 $("#content").html(data);
             },
             error: function () {
