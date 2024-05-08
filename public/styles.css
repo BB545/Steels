@@ -484,7 +484,8 @@ footer{
 .check-name,
 .check-btn,
 .plus-btn-item,
-.our-pro {
+.our-pro,
+.order-name {
     transition: font-size 0.3s ease 0.3s;
 }
 
@@ -499,7 +500,8 @@ footer{
 .pur-product:hover,
 .check-name:hover,
 .check-btn:hover,
-.plus-btn-item:hover {
+.plus-btn-item:hover,
+.order-name:hover {
     font-size: 40px;
 }
 
