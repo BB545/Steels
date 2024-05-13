@@ -25,7 +25,7 @@ exports.Customer = (req,res) => {
 }
 
 exports.Mypage = (req,res) => {
-    res.render('test')
+    res.render('myPage')
 }
 
 exports.Purchase = (req,res) => {
