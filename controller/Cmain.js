@@ -23,3 +23,11 @@ exports.productLife = (req,res) => {
 exports.Customer = (req,res) => {
     res.render('Customer')
 }
+
+exports.Mypage = (req,res) => {
+    res.render('test')
+}
+
+exports.Purchase = (req,res) => {
+    res.render('Purchase')
+}

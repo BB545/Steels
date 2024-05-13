@@ -5,9 +5,11 @@ const search = document.getElementById("search"),
 
 searchop.addEventListener("click", () => {
     search.classList.add("show-search");
+    isSpeechEnabled = false;
 });
 searchBtn.addEventListener("click", () => {
     search.classList.add("show-search");
+    isSpeechEnabled = false;
 });
 
 searchClose.addEventListener("click", () => {

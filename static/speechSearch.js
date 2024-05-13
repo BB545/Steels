@@ -5,10 +5,14 @@ aiBtn.addEventListener('click', ()=>{
     search.classList.add("show-search");
     sendSpeech();
     output.focus();
+    isSpeechEnabled = true;
 });
 
 output.addEventListener('click', ()=>{
-    sendSpeech();
+    if(isSpeechEnabled) {
+        sendSpeech();
+    }
+    output.value = '';
 })
 
 // searchClose.addEventListener("click", () => {
@@ -34,6 +38,6 @@ function sendSpeech() {
         var speechResult = event.results[0][0].transcript.toLowerCase();
         console.log('Confidence: ' + event.results[0][0].confidence);
         console.log('Speech Result: ' + speechResult);
-        diagnosticPara.textContent = 'Speech received: ' + speechResult + '.';
+        diagnosticPara.value = speechResult;
     }
 }
