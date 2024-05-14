@@ -37,30 +37,30 @@
       </div>
       <!-- Signup From -->
       <div class="form signup_form">
-        <form action="#">
+        <form action="#" name="signup-form" method="post">
           <h2>회원 가입</h2>
 
           <div class="input_box">
-            <input type="text" placeholder="이름을 입력하세요" required />
+            <input type="text" placeholder="이름을 입력하세요" id="username" required />
             <i class="bi bi-person users"></i>
           </div>
           <div class="input_box">
-            <input type="tel" placeholder="전화번호를 입력하세요" required />
+            <input type="tel" placeholder="전화번호를 입력하세요" id="phone" required />
             <i class="bi bi-telephone users"></i>
           </div>
           <div class="input_box" id="new-pw">
             <input
               type="password"
-              placeholder="새로운 비밀번호 만들기"
+              placeholder="새로운 비밀번호 만들기" id="userpw"
               required
             />
             <i class="bi bi-lock password"></i>
           </div>
           <div class="input_box" id="chk-pw">
-            <input type="password" placeholder="비밀번호 확인" required />
+            <input type="password" placeholder="비밀번호 확인" id="newuserpw" required />
             <i class="bi bi-lock password"></i>
           </div>
-          <button type="reset" class="button signed-in">회원 가입하기</button>
+          <button type="button" class="button signed-in" onclick="createUser()">회원 가입하기</button>
           <div class="login_signup">
             이미 계정 있으신가요? <a href="#" id="login">로그인</a>
           </div>
