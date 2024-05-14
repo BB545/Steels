@@ -12,9 +12,22 @@ itemButtons.forEach((button, index) => {
             if (modalElement) {
                 if ("modal_" + i === modalId) {
                     modalElement.style.display = "block";
+                    displayImages(i)
                 } else {
                     modalElement.style.display = "none";
                 }
+            }
+        }
+
+        function displayImages(modalNumber) {
+            const swiperWrapper = document.querySelector("#modal_" + modalNumber + " .swiper-wrapper");
+            swiperWrapper.innerHTML = "";
+        
+            for (let j = 1; j <= 4; j++) {
+                const image = document.createElement("img");
+                image.classList.add("swiper-slide");
+                image.src = "/item" + modalNumber + "_" + j + ".jpg";
+                swiperWrapper.appendChild(image);
             }
         }
 
