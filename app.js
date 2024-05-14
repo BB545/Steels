@@ -11,8 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use('/static', express.static(__dirname + '/static'))
 
-const indexRouter = require('./routes');
+const indexRouter = require('./routes/index');
 app.use('/', indexRouter)
+
+const userRouter = require('./routes/indexUser');
+app.use('/signup', userRouter)
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
