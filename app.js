@@ -14,12 +14,6 @@ app.use('/static', express.static(__dirname + '/static'))
 const indexRouter = require('./routes/index');
 app.use('/', indexRouter)
 
-const signRouter = require('./routes/signUser');
-app.use('/signup', signRouter)
-
-const loginRouter = require('./routes/loginUser');
-app.use('/', loginRouter)
-
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
 });
