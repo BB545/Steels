@@ -19,6 +19,7 @@ signupBtn.addEventListener("click", (e) => {
     formContainer.classList.add("active");
 });
 loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     formContainer.classList.remove("active");
 });
 
@@ -58,4 +59,39 @@ function createUser() {
         form.reset();
         formContainer.classList.remove("active");
     })
+}
+
+function loginUser() {
+    const form = document.forms['login-form'];
+
+    if(form.loginPhone.value.length === 0){
+        alert('전화번호를 작성해주세요.')
+        return 
+    }
+
+    if(form.loginUserpw.value.length === 0){
+        alert('비밀번호를 작성해주세요.')
+        return 
+    }
+
+    axios({
+        method: 'post',
+        url: '/',
+        data: {
+            loginPhone: form.loginPhone.value,
+            loginUserpw: form.loginUserpw.value
+        }
+    }).then(res=>{
+        if(res.data.isLogin) {
+            alert('로그인 성공');
+            form.reset();
+            window.location.href = '/'
+        } else {
+            alert('일치하는 로그인 정보가 없습니다.');
+            form.reset();
+        }
+    }).catch(err => {
+        console.error('Error logging in:', err);
+        alert('로그인 중 오류가 발생했습니다.');
+    });
 }

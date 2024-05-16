@@ -4,17 +4,17 @@
       <i class="bi bi-x-lg form_close"></i>
       <!-- Login From -->
       <div class="form login_form">
-        <form action="#" class="login-reset" id="form">
+        <form action="#" class="login-reset" id="form" name="login-form" method="post">
           <h2>로그인</h2>
 
           <div class="input_box">
-            <input type="tel" placeholder="전화번호를 입력하세요" required />
+            <input type="tel" placeholder="전화번호를 입력하세요" id="loginPhone" required />
             <i class="bi bi-telephone users"></i>
           </div>
           <div class="input_box">
             <input
               type="password"
-              placeholder="비밀번호를 입력하세요"
+              placeholder="비밀번호를 입력하세요" id="loginUserpw"
               required
             />
             <i class="bi bi-lock password"></i>
@@ -28,7 +28,7 @@
             <a href="#" class="forgot_pw">비밀번호 찾기</a>
           </div>
 
-          <button type="reset" class="button logged-btn">로그인하기</button>
+          <button type="button" class="button logged-btn" onclick="loginUser()">로그인</button>
 
           <div class="login_signup">
             계정 없으신가요? <a href="#" id="signup">회원 가입</a>

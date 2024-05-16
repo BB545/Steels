@@ -15,3 +15,12 @@ exports.postUser = (data, cb)=>{
         cb(rows)
     })
 }
+
+exports.loginUser = (data, cb) => {
+    const sql = 'SELECT * FROM user WHERE phone = ? AND userpw = ?';
+    const values = [data.loginPhone, data.loginUserpw];
+    conn.query(sql, values, (err, rows) => {
+        if (err) throw err;
+        cb(rows);
+    });
+};
