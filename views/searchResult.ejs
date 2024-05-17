@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/product.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <%- include('./partials/badge.ejs') %>
+
+    <%- include('./partials/login.ejs') %>
+    <%- include('./partials/search.ejs') %>
+    <%- include('./partials/cart.ejs') %>
+
+    <main>
+        <div class="search-results" id="search-results" style="width: 100%; height: 200px; position: absolute; top: 100px;">
+            
+        </div>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+    <script src="../static/menuTog.js"></script>
+    <!-- <script src="../static/modal.js"></script> -->
+    <script src="../static/User.js"></script>
+    <script src="../static/cart.js"></script>
+    <script src="../static/search.js"></script>
+    <script src="../static/speechSearch.js"></script>
+</body>
+</html>
