@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session')
 const app = express();
 const bodyParser = require('body-parser');
 const Iamport = require('iamport');
@@ -10,6 +11,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use('/static', express.static(__dirname + '/static'))
+app.use(session({
+    secret: 'secretKey',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        maxAge: 60*1000
+    }
+}))
 
 const indexRouter = require('./routes/index');
 app.use('/', indexRouter)

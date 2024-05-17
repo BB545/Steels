@@ -76,7 +76,7 @@ function loginUser() {
 
     axios({
         method: 'post',
-        url: '/',
+        url: '/login',
         data: {
             loginPhone: form.loginPhone.value,
             loginUserpw: form.loginUserpw.value

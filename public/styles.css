@@ -181,6 +181,7 @@ div.button:active {
     display: flex;
     align-items: center;
     width: 100%;
+    height: 100px;
     column-gap: .5rem;
     background-color:transparent;
     transform: translateY(-1rem);
