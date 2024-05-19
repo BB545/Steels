@@ -1,34 +1,13 @@
-<div class="cart" id="cart">
-    <div action="" class="cart__form">
-      <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="300px"
-          fill="currentColor"
-          class="bi bi-cart2"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-          />
-        </svg>
-      </div>
-      <span class="empty">장바구니가 비었어요.</span><br /><br />
-      <span
-        >장바구니를 새로운 상품으로<br />
-        채워보세요.</span
-      >
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50px"
-      fill="currentcolor"
-      class="bi bi-x cart__close"
-      id="cart-close"
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-      ></path>
-    </svg>
+<div class="cart_result">
+  <h2>장바구니</h2>
+  <div class="total-price"><h2>총 가격</h2><div class="total-pricebox"><span id="total-price">0</span>원</div></div>
+  
+  <div id="label" class="text-center"></div>
+  <div class="cart-items" id="cart-items"></div>
+
+  <div class="cart-actions">
+    <button type="button" class="btn btn-outline-success">선택 상품 주문</button>
+    <button type="button" class="btn btn-outline-success">전체 상품 주문</button>
+    <button type="button" class="btn btn-outline-danger">장바구니 비우기</button>
+  </div>
 </div>
