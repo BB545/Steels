@@ -11,7 +11,7 @@ const formOpenlg = document.querySelector("#login_open"),
 formOpenlg.addEventListener("click", () => home.classList.add("show"));
 formOpenBtn.addEventListener("click", () => home.classList.add("show"));
 formCloseBtn.addEventListener("click", () =>
-        home.classList.remove("show")
+    home.classList.remove("show")
 );
 
 signupBtn.addEventListener("click", (e) => {
@@ -26,22 +26,22 @@ loginBtn.addEventListener("click", (e) => {
 function createUser() {
     const form = document.forms['signup-form'];
 
-    if(form.username.value.length === 0){
+    if (form.username.value.length === 0) {
         alert('이름을 작성해주세요.')
-        return 
+        return
     }
 
-    if(form.phone.value.length === 0){
+    if (form.phone.value.length === 0) {
         alert('전화번호를 작성해주세요.')
-        return 
+        return
     }
 
-    if(form.userpw.value.length === 0){
+    if (form.userpw.value.length === 0) {
         alert('비밀번호를 작성해주세요.')
-        return 
+        return
     }
 
-    if(form.userpw.value !== form.newuserpw.value) {
+    if (form.userpw.value !== form.newuserpw.value) {
         alert('비밀번호가 일치하지 않습니다.')
         return
     }
@@ -54,7 +54,7 @@ function createUser() {
             phone: form.phone.value,
             userpw: form.userpw.value
         }
-    }).then(res=>{
+    }).then(res => {
         alert('회원가입이 완료되었습니다.')
         form.reset();
         formContainer.classList.remove("active");
@@ -64,14 +64,14 @@ function createUser() {
 function loginUser() {
     const form = document.forms['login-form'];
 
-    if(form.loginPhone.value.length === 0){
+    if (form.loginPhone.value.length === 0) {
         alert('전화번호를 작성해주세요.')
-        return 
+        return
     }
 
-    if(form.loginUserpw.value.length === 0){
+    if (form.loginUserpw.value.length === 0) {
         alert('비밀번호를 작성해주세요.')
-        return 
+        return
     }
 
     axios({
@@ -81,11 +81,12 @@ function loginUser() {
             loginPhone: form.loginPhone.value,
             loginUserpw: form.loginUserpw.value
         }
-    }).then(res=>{
-        if(res.data.isLogin) {
+    }).then(res => {
+        if (res.data.isLogin) {
             alert('로그인 성공');
             form.reset();
-            window.location.href = '/'
+            home.classList.remove("show");
+            window.location.reload();
         } else {
             alert('일치하는 로그인 정보가 없습니다.');
             form.reset();

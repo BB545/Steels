@@ -18,5 +18,10 @@ router.post('/signup', controller2.post_user)
 router.get('/logout', controller2.get_logoutSession)
 
 router.get('/search', controller3.searchResult);
+router.get('/cart', controller3.cartResult);
+router.get('/addCart', controller3.addToCart);
+// router.get('/products', productController.getAllProducts);
+// router.get('/product/:id', productController.getProductById);
+
 
 module.exports = router;
