@@ -32,11 +32,9 @@ exports.get_loginSession = (req,res) => {
 exports.get_logoutSession = (req,res) => {
     const user = req.session.user;
     if(user!==undefined){
-        console.log('-----');
         req.session.destroy(err=>{
             res.redirect('/')
         })
-        alert('로그아웃되었습니다.')
     } else{
         res.send('잘못된 접근입니다.')
     }

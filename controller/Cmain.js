@@ -3,29 +3,43 @@ exports.main = (req,res) => {
 }
 
 exports.productAll = (req,res) => {
-    res.render('productAll')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('productAll', { isLogged, user })
 }
 
 exports.productLiving = (req,res) => {
-    res.render('productLiving')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('productLiving', { isLogged, user })
 }
 
 exports.productOut = (req,res) => {
-    res.render('productOut')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('productOut', { isLogged, user })
 }
 
 exports.productLife = (req,res) => {
-    res.render('productLife')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('productLife', { isLogged, user })
 }
 
 exports.Customer = (req,res) => {
-    res.render('Customer')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('Customer', { isLogged, user })
 }
 
 exports.Mypage = (req,res) => {
-    res.render('myPage')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('myPage', { isLogged, user })
 }
 
 exports.Purchase = (req,res) => {
-    res.render('Purchase')
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('Purchase', { isLogged, user })
 }
