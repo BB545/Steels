@@ -1,13 +1,52 @@
-<div class="cart_result">
-  <h2>장바구니</h2>
-  <div class="total-price"><h2>총 가격</h2><div class="total-pricebox"><span id="total-price">0</span>원</div></div>
-  
-  <div id="label" class="text-center"></div>
-  <div class="cart-items" id="cart-items"></div>
+<section class="container">
+  <div class="cart_result">
+    <h2>장바구니</h2>
+    <div class="total-price">
+      <h2>총 가격</h2>
+      <div class="total-pricebox" id="cartTotalPrice"><span id="totalPrice"><%= totalPrice %></span>원</div>
+    </div>
 
-  <div class="cart-actions">
-    <button type="button" class="btn btn-outline-success">선택 상품 주문</button>
-    <button type="button" class="btn btn-outline-success">전체 상품 주문</button>
-    <button type="button" class="btn btn-outline-danger">장바구니 비우기</button>
+    <div class="cart-items" id="cart-items">
+      <% if (message) { %>
+        <h2 class="cartEmtMg">
+          <%= message %>
+        </h2>
+        <% } else { %>
+          <% items.forEach(item=> { %>
+            <div class="cart-item">
+              <img class="cart_item_img" src="/item<%= item.pro_num %>.jpg" alt="" />
+              <div class="details">
+                <div class="title-price-x">
+                  <div class="title-price">
+                    <h2>
+                      <%= item.pro_name %>
+                    </h2>
+                    <p class="cart-item-price">
+                      <%= item.pro_price %> 원
+                    </p>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <i onclick="decrement('<%= item.pro_num %>')" class="bi bi-dash-lg cart-dashBtn"></i>
+                  <h2 id="<%= item.pro_num %>" class="quantity">
+                    <%= item.quantity %>
+                  </h2>
+                  <i onclick="increment('<%= item.pro_num %>')" class="bi bi-plus-lg cart-plusBtn"></i>
+                </div>
+                <h2>
+                  <%= item.quantity * item.pro_price %> 원
+                </h2>
+              </div>
+              <i onclick="removeItem('<%= item.pro_num %>')" class="bi bi-x-lg cart-delBtn"></i>
+            </div>
+          <% }); %>
+        <% } %>
+    </div>
+
+    <div class="cart-actions">
+      <button type="button" class="btn btn-outline-success">선택 상품 주문</button>
+      <button type="button" class="btn btn-outline-success">전체 상품 주문</button>
+      <button type="button" class="btn btn-outline-danger">장바구니 비우기</button>
+    </div>
   </div>
-</div>
+</section>

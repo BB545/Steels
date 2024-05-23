@@ -2,7 +2,7 @@
   <% if (isLogged) { %>
     <div class="nav-login">
       <a href="/logout">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40px" fill="black" class="bi bi-person-circle"
+        <svg xmlns="http://www.w3.org/2000/svg" width="40px" fill="black" class="bi bi-person-circle logoutBtn"
           viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
           <path fill-rule="evenodd"
@@ -72,19 +72,21 @@
           </div>
           <!-- 장바구니 -->
           <div class="button button-menu-icon cart_tog">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="black" class="bi bi-cart-fill nav__cart"
-              id="cart-btn" viewBox="0 0 16 16">
-              <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-            </svg>
-            <div class="cartAmount" id="cartAmount">0</div>
+            <a href="/cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="black" class="bi bi-cart-fill nav__cart cartView"
+                id="cart-btn" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+              </svg>
+            </a>
+            <div class="cartAmount" id="cartAmount1">0</div>
             <div class="hover-text">장바구니</div>
           </div>
           <!-- 로그인 -->
           <% if (isLogged) { %>
             <div class="button button-menu-icon login_tog">
               <a href="/logout">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="black" class="bi bi-person-circle"
+                <svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="black" class="bi bi-person-circle logoutBtn"
                   viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                   <path fill-rule="evenodd"

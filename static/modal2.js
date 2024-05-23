@@ -22,7 +22,7 @@ itemButtons.forEach((button, index) => {
         function displayImages(modalNumber) {
             const swiperWrapper = document.querySelector("#modal_" + modalNumber + " .swiper-wrapper");
             swiperWrapper.innerHTML = "";
-        
+
             for (let j = 1; j <= 4; j++) {
                 const image = document.createElement("img");
                 image.classList.add("swiper-slide");
@@ -53,6 +53,12 @@ itemButtons.forEach((button, index) => {
                 );
             },
         });
+
+        const saveButton = document.querySelector(".save_button a");
+        const buyButton = document.querySelector(".buy_button a");
+
+        saveButton.setAttribute("data-index", clickedIndex);
+        buyButton.setAttribute("data-index", clickedIndex);
     });
 });
 
