@@ -131,6 +131,14 @@ h2 {
     display: block;
     font-weight: bold;
 }
+.check-group input[type="button"] {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 .check-group:not(:last-child) {
     margin-bottom: 20px;
 }

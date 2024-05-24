@@ -46,9 +46,43 @@ exports.getCartPage = (req, res) => {
     });
 };
 
-
 exports.postCartPage = (req, res) => {
     const basket = req.body.basket || [];
     req.session.basket = basket;
     res.json({ success: true });
 };
+
+exports.getPurchase = (req, res) => {
+    const productId = req.params.id;
+    Product.getPurchaseById(productId, (product) => {
+        if (product.length > 0) {
+            res.json(product[0]);
+        } else {
+            res.status(404).json({ error: 'Product not found' });
+        }
+    });
+};
+
+exports.renderPurchasePage = (req, res) => {
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('Purchase', { isLogged, user });
+};
+
+exports.postOrder = (req, res) => {
+    const { fullname, tel, productData, sample6_address, sample6_detailAddress, payment } = req.body;
+
+    const pur_num = `20240424000${productData.pro_num}`;
+    const pur_dest = `${sample6_address} ${sample6_detailAddress}`;
+    const pur_date = new Date().toISOString().slice(0, 10); // 현재 날짜
+    const orderData = [fullname, tel, pur_num, productData.pro_name, pur_date, pur_dest, productData.pro_price, payment];
+
+    Product.postOrder(orderData, (err, results) => {
+        if (err) {
+            console.error('Database error:', err);
+            res.status(500).send('서버 오류: 주문을 처리하는 중 오류가 발생했습니다.');
+            return;
+        }
+        res.send({ success: true, message: '주문이 완료되었습니다.' });
+    })
+}
