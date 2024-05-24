@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (buyButton) {
         buyButton.addEventListener('click', function (event) {
-            // event.preventDefault(); // 기본 동작 방지
             const clickedIndex = this.getAttribute("data-index");
             fetchProductInfo(clickedIndex)
                 .then(product => {

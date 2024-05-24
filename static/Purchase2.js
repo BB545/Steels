@@ -15,28 +15,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (productImg) {
             productImg.src = `/item${product.pro_num}.jpg`;
-            console.log('Product Image Updated:', productImg.src);  // 이미지 업데이트 확인
+            console.log('Product Image Updated:', productImg.src);
         } else {
             console.error('Error: .pro-img 요소를 찾을 수 없습니다.');
         }
 
         if (productName) {
             productName.innerText = product.pro_name;
-            console.log('Product Name Updated:', productName.innerText);  // 이름 업데이트 확인
+            console.log('Product Name Updated:', productName.innerText);
         } else {
             console.error('Error: .pro-name 요소를 찾을 수 없습니다.');
         }
 
         if (productPrice) {
             productPrice.innerText = `${product.pro_price}원`;
-            console.log('Product Price Updated:', productPrice.innerText);  // 가격 업데이트 확인
+            console.log('Product Price Updated:', productPrice.innerText);
         } else {
             console.error('Error: .pro-price 요소를 찾을 수 없습니다.');
         }
 
         if (purchasePrice) {
             purchasePrice.innerText = `${product.pro_price}원`;
-            console.log('Purchase Price Updated:', purchasePrice.innerText);  // 총 금액 업데이트 확인
+            console.log('Purchase Price Updated:', purchasePrice.innerText);
         } else {
             console.error('Error: .pur-price 요소를 찾을 수 없습니다.');
         }

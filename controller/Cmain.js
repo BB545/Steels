@@ -37,9 +37,3 @@ exports.Mypage = (req,res) => {
     const isLogged = user !== undefined;
     res.render('myPage', { isLogged, user })
 }
-
-exports.Purchase = (req,res) => {
-    const user = req.session.user;
-    const isLogged = user !== undefined;
-    res.render('Purchase', { isLogged, user })
-}

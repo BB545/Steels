@@ -11,7 +11,6 @@ router.get('/productOut', controller.productOut)
 router.get('/productLife', controller.productLife)
 router.get('/Customer', controller.Customer)
 router.get('/Mypage', controller.Mypage)
-// router.get('/Purchase', controller.Purchase)
 
 router.post('/login', controller2.post_login)
 router.post('/signup', controller2.post_user)

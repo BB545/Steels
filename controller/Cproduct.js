@@ -74,7 +74,7 @@ exports.postOrder = (req, res) => {
 
     const pur_num = `20240424000${productData.pro_num}`;
     const pur_dest = `${sample6_address} ${sample6_detailAddress}`;
-    const pur_date = new Date().toISOString().slice(0, 10); // 현재 날짜
+    const pur_date = new Date().toISOString().slice(0, 10);
     const orderData = [fullname, tel, pur_num, productData.pro_name, pur_date, pur_dest, productData.pro_price, payment];
 
     Product.postOrder(orderData, (err, results) => {

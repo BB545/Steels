@@ -24,24 +24,21 @@ app.use(session({
 }))
 
 const iamport = new Iamport({
-    impKey: '0364533486857027', // 여기에 아임포트에서 발급받은 REST API 키를 입력하세요.
-    impSecret: 'DUbx3qnHA7235eLHZai3y2wTnsTtWGQYY8uWWRqNqjiPNZM2Bm9ZTEmpomwYdw87qPA69JoqYQH8WnH7' // 여기에 아임포트에서 발급받은 REST API Secret을 입력하세요.
+    impKey: '0364533486857027',
+    impSecret: 'DUbx3qnHA7235eLHZai3y2wTnsTtWGQYY8uWWRqNqjiPNZM2Bm9ZTEmpomwYdw87qPA69JoqYQH8WnH7'
 });
 
 app.post('/payments', async (req, res) => {
-    const { imp_uid } = req.body; // 클라이언트로부터 imp_uid 받기
+    const { imp_uid } = req.body;
 
     try {
-        // 액세스 토큰(access token) 요청
         const accessToken = await iamport.payment.getToken();
 
-        // 결제 정보 조회
         const paymentResult = await iamport.payment.getByImpUid({
             impUid: imp_uid,
-            accessToken: accessToken.response.access_token, // 접근 토큰 사용
+            accessToken: accessToken.response.access_token,
         });
 
-        // 조회된 결제 정보를 클라이언트로 응답
         res.json({ success: true, paymentInfo: paymentResult.response });
     } catch (error) {
         res.status(500).json({ success: false, message: '결제 정보 조회 실패', error });

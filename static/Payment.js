@@ -1,20 +1,16 @@
 $(document).ready(function () {
-    // 결제 수단 변경 시 이벤트
     $('#payment').change(function () {
         if ($(this).val() == 'creditcard') {
-            // 신용 카드를 선택한 경우, 버튼 클릭 이벤트에 결제 함수 연결
             $('#paymentBtn').off('click').on('click', function (e) {
-                e.preventDefault(); // 폼 제출 방지
-                payment(); // 결제 함수 호출
+                e.preventDefault();
+                payment();
             });
         } else if ($(this).val() == 'payin') {
-            // 다른 결제 수단을 선택한 경우, 버튼 클릭 이벤트에 다른 결제 함수 연결
             $('#paymentBtn').off('click').on('click', function (e) {
-                e.preventDefault(); // 폼 제출 방지
-                processPayIn(); // payin 결제 함수 호출
+                e.preventDefault();
+                processPayIn();
             });
         } else {
-            // 그 외의 결제 수단을 선택한 경우, 기존 이벤트 해제
             $('#paymentBtn').off('click');
         }
     });
@@ -49,7 +45,6 @@ function payment() {
                     merchant_uid: `20240424000${productData.pro_num}`,
                     paid_amount: productData.pro_price,
                     apply_num: rsp.apply_num,
-                    // 여기에 제품 정보 추가
                     product_id: productData.pro_num,
                     product_name: productData.pro_name,
                     product_price: productData.pro_price
@@ -114,5 +109,5 @@ function processPayIn() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    $('#payment').trigger('change'); // 페이지 로드 시 초기 결제 수단 상태에 따른 이벤트 설정
+    $('#payment').trigger('change');
 });
