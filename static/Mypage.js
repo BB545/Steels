@@ -38,4 +38,23 @@ window.onload = function (event) {
         .catch(function (error) {
             console.log(error);
         });
-  }
+
+    axios.get('/customer/data')
+        .then(function (response) {
+            const customerData = response.data.customers;
+            let tableContent = '';
+            customerData.forEach((customer, index) => {
+                const utcDateString = `${customer.date}`;
+                const date = new Date(utcDateString);
+                tableContent += `
+                            <td class="cus_num">${index + 1}</td>
+                            <td class="cus_cont">${customer.usercontent}</td>
+                            <td class="cus_date">${date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}</td>
+                           `;
+            });
+            document.getElementById('cus_con').innerHTML = tableContent;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}

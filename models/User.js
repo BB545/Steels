@@ -24,3 +24,24 @@ exports.loginUser = (data, cb) => {
         cb(rows);
     });
 };
+
+exports.fromCustomer = (data, cb) => {
+    const sql = 'INSERT INTO customer (username, phone, usercontent, date) VALUES (?, ?, ?, ?)';
+    const values = [data.username, data.phone, data.usercontent, data.date];
+    conn.query(sql, values, (err, results) => {
+            if (err) {
+                return cb(err, null);
+            }
+            return cb(null, results);
+        }
+    );
+}
+
+exports.getCustomer = (userPhone, cb) => {
+    const sql = 'SELECT * FROM customer WHERE phone = ?';
+    conn.query(sql, [userPhone], (err, results) => {
+        if (err) throw err;
+        console.log(results);
+        cb(results);
+    });
+}

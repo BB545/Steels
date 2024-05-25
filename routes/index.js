@@ -15,6 +15,8 @@ router.get('/Mypage', controller.Mypage)
 router.post('/login', controller2.post_login)
 router.post('/signup', controller2.post_user)
 router.get('/logout', controller2.get_logoutSession)
+router.post('/customer', controller2.fromCustomer)
+router.get('/customer/data', controller2.getCustomer);
 
 router.get('/search', controller3.searchResult);
 router.get('/cart', controller3.getCartPage);

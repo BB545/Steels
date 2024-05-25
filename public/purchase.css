@@ -29,7 +29,12 @@ h2 {
 
 #orders-container {
     width: 100%;
-    height: 33%;
+    height: 400px;
+}
+
+#orders-container > h2 {
+    text-align: center;
+    line-height: 400px;
 }
 
 .order-info {
