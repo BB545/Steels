@@ -9,13 +9,13 @@ const conn = mysql.createConnection({
 
 exports.searchByTag = (tag, cb) => {
     const query = 'SELECT * FROM product WHERE pro_tag LIKE ?';
-    const tagParam = '%' + tag + '%';
-    console.log(tagParam);
-    conn.query(query, [tagParam], (err, results) => {
+    const tagParams = '%' + tag + '%'
+    conn.query(query, [tagParams], (err, results) => {
         if (err) {
             console.error('Error:', err);
             return cb([]);
         }
+        console.log(results);
         cb(results);
     });
 };

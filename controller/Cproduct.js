@@ -6,11 +6,12 @@ exports.searchResult = (req, res) => {
     const tag = req.query.tag;
     console.log(req.query.tag);
     if (!tag) {
-        return res.render('searchResult', { products: [], tag: '검색 결과가 없습니다.', isLogged, user });
+        res.redirect('/searchResult?error=검색어를 입력하세요.');
+    } else {
+        Product.searchByTag(tag, (products) => {
+            res.render('searchResult', { products, tag, isLogged, user });
+        });
     }
-    Product.searchByTag(tag, (products) => {
-        res.render('searchResult', { products, tag: tag, isLogged, user });
-    });
 };
 
 exports.getCartPage = (req, res) => {

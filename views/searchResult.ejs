@@ -12,21 +12,19 @@
 
     <%- include('./partials/login.ejs') %>
     <%- include('./partials/search.ejs') %>
-    <%- include('./partials/cart.ejs') %>
 
     <main>
-        <div class="search-results" id="search-results" style="width: 100%; height: 200px; position: absolute; top: 100px;">
-            
-        </div>
+    <%- include('./partials/searchResult.ejs') %>
     </main>
 
     <%- include('./partials/footer.ejs') %>
 
     <script src="../static/menuTog.js"></script>
-    <!-- <script src="../static/modal.js"></script> -->
     <script src="../static/User.js"></script>
     <script src="../static/cart.js"></script>
     <script src="../static/search.js"></script>
+    <script src="../static/searchModal.js"></script>
     <script src="../static/speechSearch.js"></script>
+    <script src="../static/Mypage.js"></script>
 </body>
 </html>
