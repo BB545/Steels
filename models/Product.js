@@ -45,3 +45,12 @@ exports.postOrder = (orderData, cb) => {
         cb(null, results);
     })
 }
+
+exports.getUserOrders = (userPhone, cb) => {
+    const sql = 'SELECT * FROM orderlist WHERE phone = ?';
+    conn.query(sql, [userPhone], (err, results) => {
+        if (err) throw err;
+        console.log(results);
+        cb(results);
+    });
+};

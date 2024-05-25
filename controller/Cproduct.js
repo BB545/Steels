@@ -86,3 +86,19 @@ exports.postOrder = (req, res) => {
         res.send({ success: true, message: '주문이 완료되었습니다.' });
     })
 }
+
+exports.getMypage = (req,res) => {
+    res.render('myPage')
+}
+
+exports.get_userOrders = (req, res) => {
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    if (!user) {
+        return res.status(401).send({ message: '로그인이 필요합니다.' });
+    }
+
+    Product.getUserOrders(user, (orders) => {
+        res.json({ orders: orders, isLogged, user });
+    });
+};

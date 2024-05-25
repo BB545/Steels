@@ -1,7 +1,7 @@
 <header class="header">
   <% if (isLogged) { %>
     <div class="nav-login">
-      <a href="/logout">
+      <a href="/logout" onclick="alert('로그아웃 되었습니다.')">
         <svg xmlns="http://www.w3.org/2000/svg" width="40px" fill="black" class="bi bi-person-circle logoutBtn"
           viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -49,7 +49,7 @@
               <a href="/Customer" class="nav__link">고객 지원</a>
             </li>
             <li class="nav__item">
-              <a href="/Mypage" class="nav__link">마이페이지</a>
+              <a href="/mypage" class="nav__link mypage">마이페이지</a>
             </li>
           </ul>
         </nav>
@@ -85,7 +85,7 @@
           <!-- 로그인 -->
           <% if (isLogged) { %>
             <div class="button button-menu-icon login_tog">
-              <a href="/logout">
+              <a href="/logout" onclick="alert('로그아웃 되었습니다.')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" fill="black" class="bi bi-person-circle logoutBtn"
                   viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -124,7 +124,7 @@
   <div class="div__item">
     <a href="/Customer">고객 지원</a>
   </div>
-  <div class="div__item">
-    <a href="/Mypage">마이페이지</a>
+  <div class="div__item mypage">
+    <a href="/mypage">마이페이지</a>
   </div>
 </div>
