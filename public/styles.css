@@ -304,6 +304,10 @@ div.button:active {
     justify-content: end;
 }
 
+.item-checkbox {
+    margin-top: 20px;
+}
+
 /* Footer */
 
 * {

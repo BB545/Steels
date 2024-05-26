@@ -32,6 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
             sendBasketData();
         });
     });
+
+    document.querySelector('.remBtn').addEventListener('click', function() {
+        localStorage.removeItem('basket');
+        updateCartAmount1();
+        updateCartAmount2();
+        sendBasketData();
+        location.reload();
+    });
 });
 
 function updateCartAmount1() {

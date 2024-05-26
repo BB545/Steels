@@ -39,6 +39,14 @@ exports.getPurchaseById = (id, cb) => {
     });
 };
 
+exports.getPurchaseByIds = (ids, cb) => {
+    const query = 'SELECT * FROM product WHERE pro_num IN (?)';
+    conn.query(query, [ids], (err, results) => {
+      if (err) throw err;
+      cb(results);
+    });
+}
+
 exports.postOrder = (orderData, cb) => {
     const query = 'insert into orderlist (username, phone, pur_num, pro_name, pur_date, pur_dest, pur_price, pur_pay) values (?, ?, ?, ?, ?, ?, ?, ?)'
     conn.query(query, orderData, (err,results) => {

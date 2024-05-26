@@ -24,6 +24,8 @@ router.post('/cart', controller3.postCartPage);
 router.get('/purchase/:id', controller3.getPurchase);
 router.get('/purchase', controller3.renderPurchasePage);
 router.post('/order', controller3.postOrder);
+router.get('/purchase2', controller3.renderPurchasePage2);
+router.post('/selected', controller3.SelectedPurchase);
 router.get('/mypage', controller3.getMypage);
 router.get('/mypage/data', controller3.get_userOrders);
 

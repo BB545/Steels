@@ -13,6 +13,8 @@
         </h2>
         <% } else { %>
           <% items.forEach(item=> { %>
+            <input type="checkbox" class="item-checkbox" id="item-check" data-id="<%= item.pro_num %>">
+            <label for="item-check">선택</label>
             <div class="cart-item">
               <img class="cart_item_img" src="/item<%= item.pro_num %>.jpg" alt="" />
               <div class="details">
@@ -44,9 +46,9 @@
     </div>
 
     <div class="cart-actions">
-      <button type="button" class="btn btn-outline-success">선택 상품 주문</button>
-      <button type="button" class="btn btn-outline-success">전체 상품 주문</button>
-      <button type="button" class="btn btn-outline-danger">장바구니 비우기</button>
+      <button type="button" class="btn btn-outline-success selecBtn">선택 상품 주문</button>
+      <button type="button" class="btn btn-outline-success allBtn">전체 상품 주문</button>
+      <button type="button" class="btn btn-outline-danger remBtn">장바구니 비우기</button>
     </div>
   </div>
 </section>

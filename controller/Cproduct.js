@@ -64,10 +64,29 @@ exports.getPurchase = (req, res) => {
     });
 };
 
+exports.SelectedPurchase = (req, res) => {
+    const { selectedProducts } = req.body;
+    Product.getPurchaseByIds(selectedProducts, (products) => {
+      if (products.length > 0) {
+        // 상품 주문 로직 실행
+        // 예: 주문 정보를 데이터베이스에 저장
+        res.json({ success: true, products: products });
+      } else {
+        res.status(404).json({ error: 'Selected products not found' });
+      }
+    });
+  };
+
 exports.renderPurchasePage = (req, res) => {
     const user = req.session.user;
     const isLogged = user !== undefined;
     res.render('Purchase', { isLogged, user });
+};
+
+exports.renderPurchasePage2 = (req, res) => {
+    const user = req.session.user;
+    const isLogged = user !== undefined;
+    res.render('Purchase2', { isLogged, user });
 };
 
 exports.postOrder = (req, res) => {

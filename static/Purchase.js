@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const clickedIndex = this.getAttribute("data-index");
             fetchProductInfo(clickedIndex)
                 .then(product => {
+                    localStorage.removeItem('selectedProduct');
                     localStorage.setItem('selectedProduct', JSON.stringify(product));
                     window.location.href = "/purchase";
                 })
