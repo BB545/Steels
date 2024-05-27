@@ -28,6 +28,5 @@ router.get('/purchase2', controller3.renderPurchasePage2);
 router.post('/selected', controller3.SelectedPurchase);
 router.get('/mypage', controller3.getMypage);
 router.get('/mypage/data', controller3.get_userOrders);
-router.post('/changeAddress', controller3.changeAddress);
 
 module.exports = router;

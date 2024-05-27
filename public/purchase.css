@@ -235,4 +235,21 @@ h2 {
     .purCheck {
         font-size: 15px;
     }
+
+    .order-info {
+        border: 2px solid #1E2022;
+        width: 100%;
+        height: 100%;
+        margin: 10px 0;
+    }
+    
+    .order-info img {
+        width: auto;
+        width: 100%;
+    }
+
+    #orders-container {
+        width: 100%;
+        height: 100%;
+    }
 }

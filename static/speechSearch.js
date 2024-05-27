@@ -15,11 +15,6 @@ output.addEventListener('click', ()=>{
     output.value = '';
 })
 
-// searchClose.addEventListener("click", () => {
-//     search.classList.remove("show-search");
-//     recognition.stop();
-// });
-
 function sendSpeech() {
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var recognition = new SpeechRecognition();

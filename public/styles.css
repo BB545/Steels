@@ -1,12 +1,31 @@
 /* header */
-  
-button.button{
-      color: #fff;
+
+button.button {
+    color: #fff;
 }
-.nav__actions{
-      padding:0;
-      margin: 0;
-      border: none;
+
+.nav__actions {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#brandLogoact {
+    animation: rotateAnimation 6s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* login */
@@ -21,10 +40,10 @@ div.button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(5px); 
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     z-index: 10000;
-    display: none; 
+    display: none;
 }
 
 .home.show .blur-background {
@@ -46,20 +65,25 @@ div.button:active {
     pointer-events: none;
     transition: all 0.4s ease-out;
 }
+
 .home.show .form_container {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
+
 .signup_form {
     display: none;
 }
+
 .form_container.active .signup_form {
     display: block;
 }
+
 .form_container.active .login_form {
     display: none;
 }
+
 .form_close {
     position: absolute;
     top: 10px;
@@ -69,17 +93,20 @@ div.button:active {
     opacity: 0.7;
     cursor: pointer;
 }
+
 .form_container h2 {
     font-size: 22px;
     color: #0b0217;
     text-align: center;
 }
+
 .input_box {
     position: relative;
     margin-top: 30px;
     width: 100%;
     height: 40px;
 }
+
 .input_box input {
     height: 100%;
     width: 100%;
@@ -90,9 +117,11 @@ div.button:active {
     transition: all 0.2s ease;
     border-bottom: 1.5px solid #aaaaaa;
 }
+
 .input_box input:focus {
     border-color: #0e0803;
 }
+
 .input_box i {
     position: absolute;
     top: 50%;
@@ -100,12 +129,14 @@ div.button:active {
     font-size: 20px;
     color: #707070;
 }
+
 .input_box i.users,
 .input_box i.password {
     left: 0;
 }
-.input_box input:focus ~ i.users,
-.input_box input:focus ~ i.password {
+
+.input_box input:focus~i.users,
+.input_box input:focus~i.password {
     color: black;
 }
 
@@ -115,27 +146,33 @@ div.button:active {
     align-items: center;
     justify-content: space-between;
 }
+
 .form_container a {
     color: black;
     font-size: 12px;
 }
+
 .form_container a:hover {
     text-decoration: underline;
 }
+
 .checkbox {
     display: flex;
     column-gap: 8px;
     white-space: nowrap;
 }
+
 .checkbox input {
-    accent-color:black;
+    accent-color: black;
 }
+
 .checkbox label {
     font-size: 12px;
     cursor: pointer;
     user-select: none;
     color: black;
 }
+
 .form_container .button {
     background: black;
     margin-top: 30px;
@@ -143,13 +180,15 @@ div.button:active {
     padding: 10px 0;
     border-radius: 10px;
 }
+
 .login_signup {
     font-size: 12px;
     text-align: center;
     margin-top: 15px;
 }
-  
-#signup, #login{
+
+#signup,
+#login {
     font-weight: bolder;
 }
 
@@ -169,7 +208,8 @@ div.button:active {
     pointer-events: none;
     transition: opacity .4s;
 }
-.search__close{
+
+.search__close {
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -183,7 +223,7 @@ div.button:active {
     width: 100%;
     height: 100px;
     column-gap: .5rem;
-    background-color:transparent;
+    background-color: transparent;
     transform: translateY(-1rem);
     transition: transform .4s;
 }
@@ -192,7 +232,7 @@ div.button:active {
     position: absolute;
     top: 20px;
     width: 100%;
-    padding: 1rem;  
+    padding: 1rem;
     color: black;
 }
 
@@ -200,10 +240,12 @@ div.button:active {
     opacity: 1;
     pointer-events: initial;
 }
+
 .show-search .search__form {
     transform: translateY(0);
 }
-.search__close{
+
+.search__close {
     width: max-content;
     top: 6rem;
     left: 0;
@@ -324,7 +366,7 @@ div.button:active {
     width: 400px;
     height: 330px;
     border: 1px solid black;
-    background-color: #ffffff;
+    background-color: #ffc950;
 }
 
 .alerthead {
@@ -365,7 +407,7 @@ div.button:active {
     width: 115px;
     height: 50px;
     border: none;
-    background-color: #1E2022;
+    background-color: #1e2022;
     color: #ffffff;
 }
 
@@ -401,45 +443,55 @@ div.button:active {
 /* Footer */
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
-footer{
+
+footer {
     width: 100%;
-    background-color: #C9D6DE ;
+    background-color: #C9D6DE;
     color: black;
 }
-   
+
 .footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 60px;  
+    padding: 60px;
 }
-.list-item{
-    line-height:normal;
-    color: white; 
-    font-weight: bold;
+
+.list-item {
+    line-height: normal;
+    color: black;
     font-size: 15px;
     text-decoration: none;
     list-style: none;
 }
 
-.footer-snsLogo{
-    display:flex;
+.footer-snsLogo {
+    display: flex;
     margin-top: 20px;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     gap: 30px;
 }
 
-.footer-sns{
-    width: 50px;
+.footer-sns {
     gap: 30px;
 }
-.footer-sns:hover{
-    fill:aqua;
+
+.footerYoutube {
+    width: 40px;
+}
+
+.footerInsta,
+.footerPint {
+    width: 30px;
+}
+
+.footer-sns:hover {
+    fill: aqua;
 }
 
 /* main 브랜딩 이미지 */
@@ -448,8 +500,9 @@ footer{
     position: relative;
     width: 100%;
     text-align: center;
-    overflow: hidden; /* 이미지가 부모 요소를 벗어나지 않도록 설정 */
+    overflow: hidden;
 }
+
 .main_content {
     position: relative;
     text-align: left;
@@ -460,11 +513,10 @@ footer{
 
 .main-bg {
     width: 100%;
-    height: 80vh; /* 화면의 100% 높이에 해당하는 값 */
+    height: 80vh;
     background-image: url('/main.jpeg');
-    background-size: cover; /* 이미지가 부모 요소에 꽉 차도록 설정 */
-    background-position: center; /* 이미지를 가운데로 정렬 */
-
+    background-size: cover;
+    background-position: center;
     animation: main_back 2s 1s forwards;
 }
 
@@ -472,6 +524,7 @@ footer{
     0% {
         filter: brightness(1);
     }
+
     100% {
         filter: brightness(0.3);
     }
@@ -481,6 +534,7 @@ footer{
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -495,7 +549,7 @@ footer{
     display: flex;
     flex-direction: column;
     z-index: 100;
-  }
+}
 
 .badge {
     width: 50px;
@@ -513,6 +567,7 @@ footer{
     background-color: rgb(96, 139, 247);
     position: relative;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 .badge-item {
@@ -532,12 +587,45 @@ footer{
     position: relative;
 }
 
+@keyframes fadeInOut {
+
+    0%,
+    10%,
+    20%,
+    30%,
+    70%,
+    80%,
+    90%,
+    100% {
+        opacity: 0;
+    }
+
+    40%,
+    60% {
+        opacity: 1;
+    }
+}
+
+.aiContentText {
+    opacity: 0;
+    animation: fadeInOut 15s infinite;
+    position: absolute;
+    left: -215px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    line-height: 20px;
+    font-weight: bold;
+}
+
 /* body-back */
 
 .body-back {
     height: 25vh;
     background-color: #ffffff;
-} 
+}
 
 /* animation */
 
@@ -568,7 +656,6 @@ footer{
 .hover-text3 {
     display: none;
     position: absolute;
-    /* top: -50px; */
     right: 70px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -655,16 +742,16 @@ footer{
         left: 0;
         z-index: 9998;
     }
-  
+
     .nav-login {
         padding-left: 20px;
-      }
-  
+    }
+
     .nav__list {
-        display: none; 
+        display: none;
         margin-bottom: 0;
     }
-  
+
     .nav__div {
         display: none;
         position: fixed;
@@ -672,7 +759,7 @@ footer{
         top: 75px;
         width: 100%;
     }
-  
+
     .div__item {
         background-color: #C9D6DE;
         text-align: center;
@@ -680,18 +767,18 @@ footer{
         line-height: 75px;
         font-size: 20px;
     }
-  
+
     .div__item>a {
         color: #000000;
         text-decoration: none;
         font-family: "Black Han Sans", sans-serif;
         font-weight: 400;
     }
-    
+
     .nav__toggle {
         padding-right: 20px;
     }
-  
+
     .menuBarIcons {
         display: none;
     }
@@ -706,11 +793,13 @@ footer{
         bottom: 50px;
         width: 60%;
     }
+
     #main_brand {
         font-size: 10vw;
         font-family: "Gasoek One", sans-serif;
         font-weight: 400;
     }
+
     #main_explain {
         font-size: 3vw;
         padding-top: 30px;
@@ -723,7 +812,7 @@ footer{
     .hover-text2 {
         right: 2px;
     }
-    
+
     .div__item:hover {
         font-size: 35px;
     }
@@ -731,7 +820,7 @@ footer{
     #main_brand:hover {
         font-size: 15vw;
     }
-    
+
     #main_explain:hover {
         font-size: 4vw;
     }
@@ -744,34 +833,40 @@ footer{
         width: 100%;
         font-size: 1.5rem;
     }
-    .footer-snsLogo{
+
+    .footer-snsLogo {
         margin-top: 15px;
-        justify-content:space-around;
+        justify-content: space-around;
     }
-    .footer_sns{
+
+    .footer_sns {
         width: 30px;
         gap: 10px;
     }
-    .list-item{
-        font-size: 10px; 
+
+    .list-item {
+        font-size: 10px;
     }
+
     .footer {
         gap: 2rem;
         padding: 30px;
-        justify-content: space-around;  
+        justify-content: space-around;
     }
 
-    .empty{
+    .empty {
         font-size: larger;
     }
-    .empty ~ span{
+
+    .empty~span {
         font-size: normal;
     }
-    .bi-cart2{
+
+    .bi-cart2 {
         width: 200px;
     }
 }
-  
+
 @media screen and (min-width: 768px) {
     .header {
         background-color: #C9D6DE;
@@ -785,51 +880,51 @@ footer{
         left: 0;
         z-index: 9998;
     }
-  
+
     .nav__list {
         list-style: none;
         display: flex;
         margin-bottom: 0;
     }
-  
+
     .nav__item {
         padding-right: 20px;
         font-size: 20px;
     }
-    
+
     .nav__item>a {
         color: #000000;
         text-decoration: none;
         font-family: "Black Han Sans", sans-serif;
         font-weight: 400;
     }
-  
+
     .nav__toggle {
         display: none;
     }
-  
+
     .nav__div {
         display: none;
     }
-  
+
     .nav-login {
-      display: none;
+        display: none;
     }
-  
+
     .no_div {
-      display: none;
+        display: none;
     }
-  
+
     .menuBarIcons {
         display: flex;
     }
-  
+
     .button-menu-icon {
         padding-right: 20px;
     }
-  
+
     .badge {
-      display: none;
+        display: none;
     }
 
     .containermain {
@@ -843,20 +938,22 @@ footer{
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
     #main_brand {
         font-size: 7vw;
         font-family: "Gasoek One", sans-serif;
         font-weight: 400;
     }
+
     #main_explain {
-        font-size: 2vw; 
+        font-size: 2vw;
         padding-top: 30px;
     }
 
     .hover-text {
         right: 2px;
     }
-    
+
     .nav__item:hover {
         font-size: 35px;
     }
@@ -864,7 +961,7 @@ footer{
     #main_brand:hover {
         font-size: 12vw;
     }
-    
+
     #main_explain:hover {
         font-size: 3vw;
     }

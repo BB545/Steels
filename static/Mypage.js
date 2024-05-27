@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
     axios.get('/mypage/data')
         .then(function (response) {
             const orders = response.data.orders;
@@ -57,44 +57,44 @@ document.addEventListener('DOMContentLoaded', function(event) {
             console.log(error);
         });
 
-        document.addEventListener('click', function (event) {
-            if (event.target.classList.contains('alertClose')) {
-                document.querySelector('.alertcontainer').style.display = 'none';
-            }
-        });
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertClose')) {
+            document.querySelector('.alertcontainer').style.display = 'none';
+        }
+    });
 
-        document.addEventListener('click', function (event) {
-            if (event.target.classList.contains('alertBtn')) {
-                alert('취소요청이 완료되었습니다.');
-                document.querySelector('.alertcontainer').style.display = 'none';
-            }
-        });
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertBtn')) {
+            alert('취소요청이 완료되었습니다.');
+            document.querySelector('.alertcontainer').style.display = 'none';
+        }
+    });
 
-        document.addEventListener('click', function (event) {
-            if (event.target.classList.contains('alertClose2')) {
-                document.querySelector('.alertcontainer2').style.display = 'none';
-            }
-        });
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertClose2')) {
+            document.querySelector('.alertcontainer2').style.display = 'none';
+        }
+    });
 
-        document.addEventListener('click', function (event) {
-            if (event.target.classList.contains('alertBtn2')) {
-                alert('교환요청이 완료되었습니다.');
-                document.querySelector('.alertcontainer2').style.display = 'none';
-            }
-        });
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertBtn2')) {
+            alert('교환요청이 완료되었습니다.');
+            document.querySelector('.alertcontainer2').style.display = 'none';
+        }
+    });
 
-        document.addEventListener('click', function (event) {
-            if (event.target.classList.contains('alertClose6')) {
-                document.querySelector('.alertcontainer6').style.display = 'none';
-            }
-        });
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertClose6')) {
+            document.querySelector('.alertcontainer6').style.display = 'none';
+        }
+    });
 
-        document.addEventListener('click', function (event) {
-            if (event.target.classList.contains('alertBtn3')) {
-                alert('취소요청이 완료되었습니다.');
-                document.querySelector('.alertcontainer6').style.display = 'none';
-            }
-        });
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertBtn3')) {
+            alert('취소요청이 완료되었습니다.');
+            document.querySelector('.alertcontainer6').style.display = 'none';
+        }
+    });
 
     axios.get('/customer/data')
         .then(function (response) {
@@ -104,10 +104,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 const utcDateString = `${customer.date}`;
                 const date = new Date(utcDateString);
                 tableContent += `
-                            <td class="cus_num">${index + 1}</td>
-                            <td class="cus_cont">${customer.usercontent}</td>
-                            <td class="cus_date">${date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}</td>
-                           `;
+                <tr>
+                <td class="cus_num">${index + 1}</td>
+                <td class="cus_cont">${customer.usercontent}</td>
+                <td class="cus_date">${date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}</td>
+                </tr>
+                `;
             });
             document.getElementById('cus_con').innerHTML = tableContent;
         })

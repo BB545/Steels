@@ -29,7 +29,6 @@ if (searchInput) {
                 return;
             }
 
-            // 페이지 이동
             window.location.href = `/search?tag=${encodeURIComponent(tag)}`;
         }
     });
