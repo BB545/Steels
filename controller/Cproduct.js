@@ -120,3 +120,16 @@ exports.get_userOrders = (req, res) => {
         res.json({ orders: orders, isLogged, user });
     });
 };
+
+exports.changeAddress = (req,res) => {
+    const { orderNum, newAddress } = req.body;
+
+    Product.updateAddress(newAddress, orderNum, (err, results) => {
+        if (err) {
+            console.error('Database error:', err);
+            res.status(500).send('서버 오류: 배송지를 변경하는 중 오류가 발생했습니다.');
+            return;
+        }
+        res.send({ success: true, message: '배송지가 성공적으로 변경되었습니다.' });
+    });
+}

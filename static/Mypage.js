@@ -1,6 +1,4 @@
-window.onload = function (event) {
-    event.preventDefault();
-
+document.addEventListener('DOMContentLoaded', function(event) {
     axios.get('/mypage/data')
         .then(function (response) {
             const orders = response.data.orders;
@@ -21,22 +19,81 @@ window.onload = function (event) {
                     <img src="/item${selectedProduct.pro_num}.jpg" alt="item${selectedProduct.pro_num}" class="pro-img">
                     <div class="check-pur">
                         <div class="purCheck pur-num">${order.pur_num}</div>
-                        <div class="purCheck pur-date">${order.pur_date}</div>
-                        <div class="purCheck pur-dest">${date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}</div>
+                        <div class="purCheck pur-date">${date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}</div>
+                        <div class="purCheck pur-dest">${order.pur_dest}</div>
                         <div class="purCheck pur-price">${order.pur_price}원</div>
                         <div class="purCheck pur-pay">결제 수단 : ${order.pur_pay}</div>
                         <div class="purCheck pur-btn">
-                            <button type="button" class="btn btn-outline-info pur-btn-item">주문 취소</button>
-                            <button type="button" class="btn btn-outline-info pur-btn-item">주문 교환</button>
-                            <button type="button" class="btn btn-outline-info pur-btn-item">배송지 변경</button>
+                            <button type="button" class="btn btn-outline-info pur-btn-item orderDelBtn">주문 취소</button>
+                            <button type="button" class="btn btn-outline-info pur-btn-item orderChangeBtn">주문 교환</button>
+                            <button type="button" class="btn btn-outline-info pur-btn-item changeAddBtn">배송지 변경</button>
                         </div>
                     </div>
                 `;
                 ordersContainer.appendChild(orderElement);
             });
+
+            document.querySelectorAll('.orderDelBtn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const alertContainer = document.querySelector('.alertcontainer');
+                    alertContainer.style.display = 'block';
+                });
+            });
+            document.querySelectorAll('.orderChangeBtn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const alertContainer = document.querySelector('.alertcontainer2');
+                    alertContainer.style.display = 'block';
+                });
+            });
+
+            document.querySelectorAll('.changeAddBtn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const alertContainer = document.querySelector('.alertcontainer6');
+                    alertContainer.style.display = 'block';
+                });
+            });
         })
         .catch(function (error) {
             console.log(error);
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('alertClose')) {
+                document.querySelector('.alertcontainer').style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('alertBtn')) {
+                alert('취소요청이 완료되었습니다.');
+                document.querySelector('.alertcontainer').style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('alertClose2')) {
+                document.querySelector('.alertcontainer2').style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('alertBtn2')) {
+                alert('교환요청이 완료되었습니다.');
+                document.querySelector('.alertcontainer2').style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('alertClose6')) {
+                document.querySelector('.alertcontainer6').style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('alertBtn3')) {
+                alert('취소요청이 완료되었습니다.');
+                document.querySelector('.alertcontainer6').style.display = 'none';
+            }
         });
 
     axios.get('/customer/data')
@@ -57,4 +114,4 @@ window.onload = function (event) {
         .catch(function (error) {
             console.log(error);
         });
-}
+});

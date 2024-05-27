@@ -40,6 +40,45 @@ document.addEventListener('DOMContentLoaded', function () {
         sendBasketData();
         location.reload();
     });
+
+    document.querySelectorAll('.selecCartOrder').forEach(button => {
+        button.addEventListener('click', function () {
+            const alertContainer = document.querySelector('.alertcontainer3');
+            alertContainer.style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.allCartOrder').forEach(button => {
+        button.addEventListener('click', function () {
+            const alertContainer = document.querySelector('.alertcontainer4');
+            alertContainer.style.display = 'block';
+        });
+    });
+    
+    document.querySelectorAll('.removeCartAll').forEach(button => {
+        button.addEventListener('click', function () {
+            const alertContainer = document.querySelector('.alertcontainer5');
+            alertContainer.style.display = 'block';
+        });
+    });
+
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertClose3')) {
+            document.querySelector('.alertcontainer3').style.display = 'none';
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertClose4')) {
+            document.querySelector('.alertcontainer4').style.display = 'none';
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('alertClose5')) {
+            document.querySelector('.alertcontainer5').style.display = 'none';
+        }
+    });
 });
 
 function updateCartAmount1() {

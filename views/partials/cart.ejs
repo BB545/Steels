@@ -3,7 +3,9 @@
     <h2>장바구니</h2>
     <div class="total-price">
       <h2>총 가격</h2>
-      <div class="total-pricebox" id="cartTotalPrice"><span id="totalPrice"><%= totalPrice %></span>원</div>
+      <div class="total-pricebox" id="cartTotalPrice"><span id="totalPrice">
+          <%= totalPrice %>
+        </span>원</div>
     </div>
 
     <div class="cart-items" id="cart-items">
@@ -41,14 +43,71 @@
               </div>
               <i onclick="removeItem('<%= item.pro_num %>')" class="bi bi-x-lg cart-delBtn"></i>
             </div>
-          <% }); %>
-        <% } %>
+            <% }); %>
+              <% } %>
     </div>
 
     <div class="cart-actions">
-      <button type="button" class="btn btn-outline-success selecBtn">선택 상품 주문</button>
-      <button type="button" class="btn btn-outline-success allBtn">전체 상품 주문</button>
-      <button type="button" class="btn btn-outline-danger remBtn">장바구니 비우기</button>
+      <button type="button" class="btn btn-outline-success selecCartOrder">선택 상품 주문</button>
+      <button type="button" class="btn btn-outline-success allCartOrder">전체 상품 주문</button>
+      <button type="button" class="btn btn-outline-danger removeCartAll">장바구니 비우기</button>
     </div>
   </div>
 </section>
+
+<div class="alertcontainer3">
+  <div class="alerthead">
+    <h3>주문 전 확인!!</h3>
+    <i class="bi bi-x-lg alertClose3"></i>
+  </div>
+  <div class="alertmain">
+    <div class="alertmainCon">
+      <h3>⭐ 주문 실수 방지하기 ⭐</h3>
+      <br>
+      <br>
+      <div>선택한 상품을 주문합니다 :)</div>
+      <div>'주문하기'를 누르면 주문이 진행됩니다.</div>
+      <br>
+      <div>상단의 X 표시를 누르고 주문 내용과 수량을 다시한 번 확인 후 주문해주세요 :)</div>
+    </div>
+  </div>
+  <button type="button" class="selecBtn">주문하기</button>
+</div>
+
+<div class="alertcontainer4">
+  <div class="alerthead">
+    <h3>주문 전 확인!!</h3>
+    <i class="bi bi-x-lg alertClose4"></i>
+  </div>
+  <div class="alertmain">
+    <div class="alertmainCon">
+      <h3>⭐ 주문 실수 방지하기 ⭐</h3>
+      <br>
+      <br>
+      <div>전체 상품을 주문합니다 :)</div>
+      <div>'주문하기'를 누르면 주문이 진행됩니다.</div>
+      <br>
+      <div>상단의 X 표시를 누르고 주문 내용과 수량을 다시 한번 확인 후 주문해주세요 :)</div>
+    </div>
+  </div>
+  <button type="button" class="allBtn">주문하기</button>
+</div>
+
+<div class="alertcontainer5">
+  <div class="alerthead">
+    <h3>장바구니 비우기</h3>
+    <i class="bi bi-x-lg alertClose5"></i>
+  </div>
+  <div class="alertmain">
+    <div class="alertmainCon">
+      <h3>🚨 전체 상품 삭제 🚨</h3>
+      <br>
+      <br>
+      <div class="cartRemText">장바구니의 모든 상품이 삭제됩니다.</div>
+      <br>
+      <br>
+      <div>잘못 눌렀다면 상단의 X 버튼을 눌러주세요.</div>
+    </div>
+  </div>
+  <button type="button" class="remBtn">비우기</button>
+</div>

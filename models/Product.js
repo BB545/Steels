@@ -63,3 +63,10 @@ exports.getUserOrders = (userPhone, cb) => {
         cb(results);
     });
 };
+
+exports.updateAddress = (newAddress, orderNum, cb) => {
+    const query = 'UPDATE orderlist SET pur_dest = ? WHERE pur_num = ?';
+    conn.query(query, [newAddress, orderNum], (err, results) => {
+        cb(err, results); // 에러 또는 결과를 콜백으로 반환
+    });
+}

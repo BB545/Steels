@@ -12,3 +12,47 @@
         </div>
     </div>
 </section>
+<div class="alertcontainer">
+    <div class="alerthead">
+        <h3>주문 취소 신청</h3>
+        <i class="bi bi-x-lg alertClose"></i>
+    </div>
+    <div class="alertmain">
+        <select name="cancelOpt" id="cancelOpt">
+            <option value="selecOpt">취소 사유 선택하기</option>
+            <option value="ownermiss">배송 실수</option>
+            <option value="customermiss">주문자 변심</option>
+            <option value="etc">기타</option>
+        </select>
+        <textarea name="cancelOptInput" id="cancelOptInput" placeholder="자유롭게 주문 취소 사유를 입력해주세요 :)"></textarea>
+    </div>
+    <button type="button" class="alertBtn">요청하기</button>
+</div>
+
+<div class="alertcontainer2">
+    <div class="alerthead">
+        <h3>주문 교환 신청</h3>
+        <i class="bi bi-x-lg alertClose2"></i>
+    </div>
+    <div class="alertmain">
+        <select name="changeOpt" id="changeOpt">
+            <option value="selecOpt">교환 사유 선택하기</option>
+            <option value="ownermiss">배송 실수</option>
+            <option value="customermiss">주문자 변심</option>
+            <option value="etc">기타</option>
+        </select>
+        <textarea name="changeOptInput" id="changeOptInput" placeholder="자유롭게 주문 교환 사유를 입력해주세요 :)"></textarea>
+    </div>
+    <button type="button" class="alertBtn2">요청하기</button>
+</div>
+
+<div class="alertcontainer6">
+    <div class="alerthead">
+        <h3>배송지 변경 신청</h3>
+        <i class="bi bi-x-lg alertClose6"></i>
+    </div>
+    <div class="alertmain">
+        <textarea name="changeAddInput" id="changeAddInput" placeholder="변경 신청할 배송지를 입력해주세요 :)"></textarea>
+    </div>
+    <button type="button" class="alertBtn3">요청하기</button>
+</div>
