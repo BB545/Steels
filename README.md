@@ -29,6 +29,7 @@
 
 
 ## 🙋‍♀️ 역할 소개
+<img src="/public/hyunh.png width="100px" height="100px" title="Alt Text"><img><br>
 - 노현희 : 기획, 디자인, 프론트엔드, 백엔드 개발
 
 
