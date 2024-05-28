@@ -29,7 +29,7 @@
 
 
 ## 🙋‍♀️ 역할 소개
-- 노현희 : 기획, 디자인, 프론트엔드, 백엔드 개발
+- <span style="background-color: #fff5b1">노현희</span> : 기획, 디자인, 프론트엔드, 백엔드 개발
 
 
 ## ⭐ 차별점 및 강점
@@ -38,7 +38,7 @@
 <br><br>
 
 
-1. 전화 번호로 로그인
+<h4 style="background-color: #fff5b1">1. 전화 번호로 로그인</h4>
 <br>
 
 
@@ -49,7 +49,7 @@
 
 
 <br>
-2. 큰 글자 애니메이션
+<h4 style="background-color: #fff5b1">2. 큰 글자 애니메이션</h4>
 <br>
 
 
@@ -57,7 +57,7 @@
 
 
 <br>
-3. 음성 검색
+<h4 style="background-color: #fff5b1">3. 음성 검색</h4>
 <br>
 
 
