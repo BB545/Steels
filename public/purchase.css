@@ -18,7 +18,7 @@ h2 {
 
 .order {
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 .order-name {
@@ -34,13 +34,13 @@ h2 {
 
 #orders-container > h2 {
     text-align: center;
-    line-height: 400px;
+    /* line-height: 400px; */
 }
 
 .order-info {
     border: 2px solid #1E2022;
     width: 100%;
-    height: 100%;
+    height: 50%;
     margin: 10px 0;
     display: flex;
 }
@@ -53,6 +53,7 @@ h2 {
 .check-pur {
     display: block;
     width: 70%;
+    height: 80%;
     margin: 20px;
     align-content: center;
 }
@@ -67,8 +68,8 @@ h2 {
 
 .purCheck:not(:last-child) {
     width: 100%;
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 .cus_container {
