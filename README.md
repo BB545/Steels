@@ -29,7 +29,7 @@
 
 
 ## 🙋‍♀️ 역할 소개
-<img src="public/hyunh.png  width="100" height="100"/>
+<img src="./public/hyunh.png  width="100" height="100"/>
 ![소개이미지](https://github.com/BB545/Steels/blob/main/public/hyunh.png)<br>
 - 노현희 : 기획, 디자인, 프론트엔드, 백엔드 개발
 
