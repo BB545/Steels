@@ -1,4 +1,5 @@
 const Product = require('../models/Product');
+const { generateOrderNumber } = require('../utils/orderNumberGenerator');
 
 exports.searchResult = (req, res) => {
     const user = req.session.user;
@@ -88,21 +89,112 @@ exports.renderPurchasePage2 = (req, res) => {
 };
 
 exports.postOrder = (req, res) => {
-    const { fullname, tel, productData, sample6_address, sample6_detailAddress, payment } = req.body;
+    const { fullname, tel, productData, sample6_address, sample6_detailAddress, payment, idempotencyKey } = req.body;
 
-    const pur_num = `20240424000${productData.pro_num}`;
-    const pur_dest = `${sample6_address} ${sample6_detailAddress}`;
-    const pur_date = new Date().toISOString().slice(0, 10);
-    const orderData = [fullname, tel, pur_num, productData.pro_name, pur_date, pur_dest, productData.pro_price, payment];
+    if (!fullname || !tel || !productData || !sample6_address || !payment) {
+        return res.status(400).json({ 
+            success: false, 
+            message: '필수 정보가 누락되었습니다.' 
+        });
+    }
 
-    Product.postOrder(orderData, (err, results) => {
-        if (err) {
-            console.error('Database error:', err);
-            res.status(500).send('서버 오류: 주문을 처리하는 중 오류가 발생했습니다.');
-            return;
+    // 중복 주문 방지: idempotencyKey가 있으면 기존 주문 확인
+    if (idempotencyKey) {
+        Product.checkIdempotencyKey(idempotencyKey, (err, exists, existingOrder) => {
+            if (err) {
+                console.error('Idempotency check error:', err);
+                return res.status(500).json({ 
+                    success: false, 
+                    message: '서버 오류가 발생했습니다.' 
+                });
+            }
+
+            if (exists) {
+                return res.json({ 
+                    success: true, 
+                    message: '이미 처리된 주문입니다.', 
+                    orderNumber: existingOrder.pur_num,
+                    isDuplicate: true
+                });
+            }
+
+            processNewOrder();
+        });
+    } else {
+        processNewOrder();
+    }
+
+    function processNewOrder() {
+        let pur_num;
+        let attempts = 0;
+        const maxAttempts = 5;
+
+        function generateAndCheck() {
+            pur_num = generateOrderNumber(productData.pro_num);
+            
+            Product.checkOrderNumberExists(pur_num, (err, exists) => {
+                if (err) {
+                    console.error('Order number check error:', err);
+                    return res.status(500).json({ 
+                        success: false, 
+                        message: '서버 오류가 발생했습니다.' 
+                    });
+                }
+
+                // 중복되면 다시 생성 (최대 5번 시도)
+                if (exists && attempts < maxAttempts) {
+                    attempts++;
+                    generateAndCheck();
+                    return;
+                }
+
+                if (exists) {
+                    return res.status(500).json({ 
+                        success: false, 
+                        message: '주문번호 생성에 실패했습니다. 다시 시도해주세요.' 
+                    });
+                }
+
+                const pur_dest = `${sample6_address} ${sample6_detailAddress}`;
+                const pur_date = new Date().toISOString().slice(0, 10);
+                const orderData = [
+                    fullname, 
+                    tel, 
+                    pur_num, 
+                    productData.pro_name, 
+                    pur_date, 
+                    pur_dest, 
+                    productData.pro_price, 
+                    payment
+                ];
+
+                Product.postOrder(orderData, (err, results) => {
+                    if (err) {
+                        if (err.code === 'ER_DUP_ENTRY') {
+                            return res.status(409).json({ 
+                                success: false, 
+                                message: '중복된 주문입니다. 잠시 후 다시 시도해주세요.' 
+                            });
+                        }
+                        
+                        console.error('Database error:', err);
+                        return res.status(500).json({ 
+                            success: false, 
+                            message: '서버 오류: 주문을 처리하는 중 오류가 발생했습니다.' 
+                        });
+                    }
+                    
+                    res.json({ 
+                        success: true, 
+                        message: '주문이 완료되었습니다.',
+                        orderNumber: pur_num
+                    });
+                });
+            });
         }
-        res.send({ success: true, message: '주문이 완료되었습니다.' });
-    })
+
+        generateAndCheck();
+    }
 }
 
 exports.getMypage = (req,res) => {

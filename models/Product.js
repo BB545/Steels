@@ -63,3 +63,35 @@ exports.getUserOrders = (userPhone, cb) => {
         cb(results);
     });
 };
+
+/**
+ * 주문번호 중복 체크
+ * @param {string} orderNumber - 체크할 주문번호
+ * @param {function} cb - 콜백 함수 (err, exists)
+ */
+exports.checkOrderNumberExists = (orderNumber, cb) => {
+    const sql = 'SELECT COUNT(*) as count FROM orderlist WHERE pur_num = ?';
+    conn.query(sql, [orderNumber], (err, results) => {
+        if (err) {
+            return cb(err, null);
+        }
+        const exists = results[0].count > 0;
+        cb(null, exists);
+    });
+};
+
+/**
+ * 중복 주문 방지를 위한 idempotency key 체크
+ * @param {string} idempotencyKey - 중복 방지 키
+ * @param {function} cb - 콜백 함수 (err, exists, orderData)
+ */
+exports.checkIdempotencyKey = (idempotencyKey, cb) => {
+    const sql = 'SELECT * FROM orderlist WHERE pur_num = ? OR idempotency_key = ? LIMIT 1';
+    conn.query(sql, [idempotencyKey, idempotencyKey], (err, results) => {
+        if (err) {
+            return cb(err, null, null);
+        }
+        const exists = results.length > 0;
+        cb(null, exists, exists ? results[0] : null);
+    });
+};
